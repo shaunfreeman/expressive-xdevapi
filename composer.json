@@ -1,0 +1,56 @@
+{
+  "name": "shaunfreeman/expressive-xdevapi",
+  "description": "PSR-11 library for easy setup of MySQL X DevAPI into Zend Expressive.",
+  "minimum-stability": "dev",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Shaun Freeman",
+      "email": "shaun@shaunfreeman.co.uk"
+    }
+  ],
+  "keywords": [
+    "mysql",
+    "X DevAPI",
+    "mysql_xdevapi",
+    "psr",
+    "psr-7",
+    "psr-11",
+    "psr-15",
+    "expressive",
+    "zf",
+    "zendframework",
+    "zend-expressive"
+  ],
+  "support": {
+    "issues": "https://github.com/shaunfreeman/expressive-xdevapi/issues",
+    "source": "https://github.com/shaunfreeman/expressive-xdevapi"
+  },
+  "require": {
+    "php": "^7.1",
+    "psr/container": "^1.0"
+  },
+  "require-dev": {
+    "dg/bypass-finals": "^1.1",
+    "codeclimate/php-test-reporter": "0.3.x-dev",
+    "phpunit/phpunit": "^7.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "XDevApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XDevApiTest\\": "test/"
+    }
+  },
+  "extra": {
+    "zf": {
+      "config-provider": "XDevApi\\ConfigProvider"
+    }
+  },
+  "scripts": {
+    "unit-test": "php ./vendor/bin/phpunit -v"
+  }
+}

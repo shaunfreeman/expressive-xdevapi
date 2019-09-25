@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php-cli:
+    build:
+      context: .
+      dockerfile: ./container-build/php/cli/DockerFile
+    tty: true
+    volumes:
+      - .:/home/expressive-xdevapi

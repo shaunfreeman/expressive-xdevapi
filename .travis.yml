@@ -1,0 +1,26 @@
+language: php
+
+before_script:
+  - composer install
+
+script:
+  - composer unit-test
+
+after_script:
+  - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/test-reporter --coverage-report=build/clover.xml ; fi
+
+before_install:
+  - pecl install mysql_xdevapi
+  - pecl install uopz
+  - phpenv config-add container-build/php/cli/config/mysql_xdevapi.ini
+  - phpenv config-add container-build/php/cli/config/uopz.ini
+  - composer self-update
+
+matrix:
+  include:
+    - php: 7.3
+      env:
+        - TEST_COVERAGE=true
+    - php: 7.2
+  allow_failures:
+    - php: 7.2

@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'xdevapi' => [
+        'user'      => 'dbuser',
+        'password'  => '654321',
+        'host'      => 'mysql',
+        'schema'    => 'dbname',
+        'port'      => 33060
+    ],
+];
