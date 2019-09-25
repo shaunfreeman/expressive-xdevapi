@@ -12,8 +12,7 @@ after_script:
 before_install:
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler libxml2-dev build-essential openssl
   - pecl install uopz
-  - phpenv config-add container-build/php/cli/config/mysql_xdevapi.ini
-  - phpenv config-add container-build/php/cli/config/uopz.ini
+  - phpenv config-add expressive-xdevapi/container-build/php/cli/config/uopz.ini
   - composer self-update
 
 matrix:
