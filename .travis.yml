@@ -1,3 +1,5 @@
+dist: bionic
+
 language: php
 
 before_script:
@@ -10,7 +12,9 @@ after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/test-reporter --coverage-report=build/clover.xml ; fi
 
 before_install:
-  - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler libxml2-dev build-essential openssl
+  - sudo add-apt-repository -y ppa:ondrej/php
+  - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler libxml2-dev build-essential openssl php7.3-dev
+  - pecl install mysql_xdevapi
   - pecl install uopz
   - composer self-update
 
@@ -19,6 +23,3 @@ matrix:
     - php: 7.3
       env:
         - TEST_COVERAGE=true
-    - php: 7.2
-  allow_failures:
-    - php: 7.2
