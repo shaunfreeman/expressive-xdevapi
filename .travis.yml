@@ -14,7 +14,7 @@ after_script:
 before_install:
   - sudo add-apt-repository -y ppa:ondrej/php
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler libxml2-dev build-essential openssl php7.3-dev
-  - pecl install mysql_xdevapi
+  - printf "\n" | pecl install mysql_xdevapi
   - pecl install uopz
   - composer self-update
 
