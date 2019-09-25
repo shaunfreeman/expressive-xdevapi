@@ -10,9 +10,9 @@ after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/test-reporter --coverage-report=build/clover.xml ; fi
 
 before_install:
-  - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
-  - printf "\n" | pecl install mysql_xdevapi
-  - pecl install uopz
+  - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler libxml2-dev build-essential openssl
+  - printf "\n" | sudo pecl build mysql_xdevapi
+  - sudo pecl install uopz
   - phpenv config-add container-build/php/cli/config/mysql_xdevapi.ini
   - phpenv config-add container-build/php/cli/config/uopz.ini
   - composer self-update
