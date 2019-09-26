@@ -3,8 +3,18 @@ dist: bionic
 language: php
 sudo: enabled
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=d5e7a7f811e067ae2a6714be2e0bfad603954325f6e5fc9f3ed6c30e508aed7d
+
 services:
   - docker
+
+before_install:
+  - sudo apt-get update
+  - sudo pip install docker-compose
+  - docker-compose --version
+  - composer self-update
 
 script:
   - docker-compose up -d
@@ -14,12 +24,6 @@ script:
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/test-reporter --coverage-report=build/clover.xml ; fi
-
-before_install:
-  - sudo apt-get update
-  - sudo pip install docker-compose
-  - docker-compose --version
-  - composer self-update
 
 matrix:
   include:
