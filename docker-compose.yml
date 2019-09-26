@@ -7,4 +7,4 @@ services:
       dockerfile: ./container-build/php/cli/DockerFile
     tty: true
     volumes:
-      - .:/home/expressive-xdevapi
+      - .:/home/xdevapi

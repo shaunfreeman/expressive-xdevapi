@@ -9,7 +9,7 @@ services:
 script:
   - docker-compose up -d
   - composer install
-  - docker exec -it expressive-xdevapi_php-cli_1 "/home/expressive-xdevapi/vendor/bin/phpunit -c /home/expressive-xdevapi/phpunit.xml" bash
+  - docker exec -it expressive-xdevapi_php-cli_1 php ./vendor/bin/phpunit -c ./phpunit.xml
   - docker stop $(docker ps -a -q)
 
 after_script:

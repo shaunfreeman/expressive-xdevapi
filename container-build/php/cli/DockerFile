@@ -1,5 +1,7 @@
 FROM php:7.3.9-cli
 
+RUN mkdir /home/xdevapi
+
 RUN apt-get update \
     && apt-get install -y \
         build-essential \
@@ -41,4 +43,4 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 COPY container-build/php/config/xdebug.ini $PHP_INI_DIR/conf.d/
 COPY container-build/php/config/mysql_xdevapi.ini $PHP_INI_DIR/conf.d/
 
-WORKDIR /home/expressive-xdevapi
+WORKDIR /home/xdevapi
