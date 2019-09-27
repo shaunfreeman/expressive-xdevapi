@@ -2,9 +2,5 @@ version: '3'
 
 services:
   php-cli:
-    build:
-      context: .
-      dockerfile: ./container-build/php/cli/DockerFile
+    image: shaunfreeman/php:7.3-cli
     tty: true
-    volumes:
-      - .:/home/xdevapi

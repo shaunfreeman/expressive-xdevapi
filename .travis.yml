@@ -3,10 +3,6 @@ dist: bionic
 language: php
 sudo: enabled
 
-env:
-  global:
-    - CC_TEST_REPORTER_ID=d5e7a7f811e067ae2a6714be2e0bfad603954325f6e5fc9f3ed6c30e508aed7d
-
 services:
   - docker
 

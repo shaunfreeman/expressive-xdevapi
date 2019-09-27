@@ -3,6 +3,7 @@ languages:
   PHP: true
 exclude_paths:
   - build/*
+  - config/*
   - container-build/*
   - test/*
   - vendor/*
