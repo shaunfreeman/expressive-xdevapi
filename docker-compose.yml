@@ -4,3 +4,6 @@ services:
   php-cli:
     image: shaunfreeman/php:7.3-cli
     tty: true
+    working_dir: /home/xdevapi
+    volumes:
+      - .:/home/xdevapi
