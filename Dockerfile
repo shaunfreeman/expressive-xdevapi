@@ -1,4 +1,4 @@
-FROM shaunfreeman/php:7.3-cli
+FROM shaunfreeman/php:cli-latest
 
 ARG user
 ARG uid

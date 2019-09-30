@@ -2,7 +2,7 @@ version: '3'
 
 services:
   php-cli:
-    image: shaunfreeman/php:7.3-cli
+    image: shaunfreeman/php:cli-latest
     tty: true
     working_dir: /home/xdevapi
     volumes:

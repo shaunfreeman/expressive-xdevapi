@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46e8c48261acc1daf9c2634c387c954a",
+    "content-hash": "d74ce3c6b5bc3bd316342c3033e6f325",
     "packages": [
         {
             "name": "psr/container",
@@ -1874,12 +1874,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "bf5b7abbcd234ff19c4605b9bac7ec6509ea7dc7"
+                "reference": "b1036d8d5399c9563b467d3501c8cd98910392e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/bf5b7abbcd234ff19c4605b9bac7ec6509ea7dc7",
-                "reference": "bf5b7abbcd234ff19c4605b9bac7ec6509ea7dc7",
+                "url": "https://api.github.com/repos/symfony/config/zipball/b1036d8d5399c9563b467d3501c8cd98910392e7",
+                "reference": "b1036d8d5399c9563b467d3501c8cd98910392e7",
                 "shasum": ""
             },
             "require": {
@@ -1930,7 +1930,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-19T15:56:27+00:00"
+            "time": "2019-09-27T05:43:04+00:00"
         },
         {
             "name": "symfony/console",
@@ -1938,12 +1938,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3b7baf20bdce9f09df3df70fd4b2f4ad8bebbde3"
+                "reference": "b32d395fa5db1d3cb08345acbb1df8109f1c9022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3b7baf20bdce9f09df3df70fd4b2f4ad8bebbde3",
-                "reference": "3b7baf20bdce9f09df3df70fd4b2f4ad8bebbde3",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b32d395fa5db1d3cb08345acbb1df8109f1c9022",
+                "reference": "b32d395fa5db1d3cb08345acbb1df8109f1c9022",
                 "shasum": ""
             },
             "require": {
@@ -2006,7 +2006,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-24T15:57:39+00:00"
+            "time": "2019-09-28T15:00:54+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2475,12 +2475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "baddff9b0322de9c4ed106b0886deee456548d71"
+                "reference": "110e3e9eaa7827def84cb1cfee95a6cfde4bf608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/baddff9b0322de9c4ed106b0886deee456548d71",
-                "reference": "baddff9b0322de9c4ed106b0886deee456548d71",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/110e3e9eaa7827def84cb1cfee95a6cfde4bf608",
+                "reference": "110e3e9eaa7827def84cb1cfee95a6cfde4bf608",
                 "shasum": ""
             },
             "require": {
@@ -2526,7 +2526,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-20T14:23:06+00:00"
+            "time": "2019-09-25T18:53:23+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -2627,7 +2627,10 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "ext-mysql_xdevapi": "*"
     },
-    "platform-dev": []
+    "platform-dev": {
+        "ext-uopz": "*"
+    }
 }
