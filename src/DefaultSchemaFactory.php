@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace XDevApi;
 
 
-use BadMethodCallException;
+use mysql_xdevapi\Exception;
 use mysql_xdevapi\Schema;
 use mysql_xdevapi\Session;
 use Psr\Container\ContainerInterface;
@@ -17,10 +17,12 @@ class DefaultSchemaFactory
     {
         /** @var Session $session */
         $session        = $container->get(SessionFactory::class);
-        $defaultSchema  = $session->getDefaultSchema();
+        /** @var XDevApiOptions $xDevOptions */
+        $xDevOptions    = $container->get(XDevApiOptions::class);
+        $defaultSchema  = $session->getSchema($xDevOptions->schema);
 
-        if (null === $defaultSchema) {
-            throw new BadMethodCallException(sprintf('No default schema is set in %s', XDevApiOptions::class));
+        if (!$defaultSchema->existsInDatabase()) {
+            throw new Exception(sprintf('Schema: "%s" does not exist in database', $xDevOptions->schema));
         }
 
         return $defaultSchema;

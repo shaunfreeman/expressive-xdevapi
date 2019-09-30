@@ -31,25 +31,17 @@ final class XDevApiOptions
 
     public static function fromArray(array $array): XDevApiOptions
     {
-        return new static(
-            $array['user'] ?? '',
-            $array['password'] ?? '' ,
-            $array['schema'] ?? '',
-            $array['host'] ?? '',
-            $array['port'] ?? null
-        );
-    }
+        $static             =  new static();
+        $static->user       = $array['user'] ?? '';
+        $static->password   = $array['password'] ?? '';
+        $static->schema     = $array['schema'] ?? '';
+        $static->host       = $array['host'] ?? '';
 
-    public function __construct(string $user, string $password, string $schema, string $host, ?int $port = null)
-    {
-        $this->user     = $user;
-        $this->password = $password;
-        $this->schema   = $schema;
-        $this->host     = $host;
-
-        if (is_int($port)) {
-            $this->port = $port;
+        if (isset($array['port']) && is_int($array['port'])) {
+            $static->port = $array['port'];
         }
+
+        return $static;
     }
 
     public function toArray(): array

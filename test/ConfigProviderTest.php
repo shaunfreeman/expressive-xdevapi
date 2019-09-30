@@ -8,13 +8,16 @@ namespace XDevApiTest;
 use PHPUnit\Framework\TestCase;
 use XDevApi;
 use XDevApi\ConfigProvider;
+use XDevApi\XDevApiOptions;
+use XDevApi\XDevApiOptionsFactory;
 
 class ConfigProviderTest extends TestCase
 {
     private $config = [
         'factories'  => [
             XDevApi\DefaultSchemaFactory::class => XDevApi\DefaultSchemaFactory::class,
-            XDevApi\SessionFactory::class => XDevApi\SessionFactory::class,
+            XDevApi\SessionFactory::class       => XDevApi\SessionFactory::class,
+            XDevApiOptions::class               => XDevApiOptionsFactory::class,
         ],
     ];
 

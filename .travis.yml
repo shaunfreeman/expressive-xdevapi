@@ -13,8 +13,8 @@ before_install:
   - composer self-update
 
 script:
-  - docker-compose up -d
-  - composer install
+  - docker-compose -f ./docker-compose-unittest.yml up -d
+  - docker exec -it expressive-xdevapi_php-cli_1 php composer install
   - docker exec -it expressive-xdevapi_php-cli_1 php ./vendor/bin/phpunit -c ./phpunit.xml
   - docker stop $(docker ps -a -q)
 

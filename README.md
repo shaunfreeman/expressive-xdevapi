@@ -3,6 +3,7 @@ Expressive X DevAPI
 [![Build Status](https://travis-ci.org/shaunfreeman/expressive-xdevapi.svg?branch=master)](https://travis-ci.org/shaunfreeman/expressive-xdevapi)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f20a0f21df2297ae031c/test_coverage)](https://codeclimate.com/github/shaunfreeman/expressive-xdevapi/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f20a0f21df2297ae031c/maintainability)](https://codeclimate.com/github/shaunfreeman/expressive-xdevapi/maintainability)
+[![Packagist](https://img.shields.io/packagist/v/shaunfreeman/expressive-xdevapi.svg)](https://packagist.org/packages/shaunfreeman/expressive-xdevapi)
 
 This is a PSR-11 library for easy setup of MySQL X DevAPI into Zend Expressive.
 To use this library you must have the PECL mysql_xdevapi installed, see https://www.php.net/manual/en/book.mysql-xdevapi.php on how to install this extension.

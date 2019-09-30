@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -18,23 +18,17 @@ final class XDevApiOptionsTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->options =  new XDevApiOptions(
-            $_SERVER['MYSQL_USER'],
-            $_SERVER['MYSQL_PASSWORD'],
-            $_SERVER['MYSQL_DATABASE'],
-            $_SERVER['MYSQL_HOST'],
-            33060
-        );
+        $this->options =  XDevApiOptions::fromArray([
+            'user'      => $_SERVER['MYSQL_USER'],
+            'password'  => $_SERVER['MYSQL_PASSWORD'],
+            'schema'    => $_SERVER['MYSQL_DATABASE'],
+            'host'      => $_SERVER['MYSQL_HOST'],
+        ]);
     }
 
     public function testCanCreateOptions()
     {
-        $options = new XDevApiOptions(
-            $_SERVER['MYSQL_USER'],
-            $_SERVER['MYSQL_PASSWORD'],
-            $_SERVER['MYSQL_DATABASE'],
-            $_SERVER['MYSQL_HOST'],
-        );
+        $options = new XDevApiOptions;
 
         $this->assertInstanceOf(XDevApiOptions::class, $options);
     }
@@ -46,6 +40,7 @@ final class XDevApiOptionsTest extends TestCase
             'password'  => $_SERVER['MYSQL_PASSWORD'],
             'schema'    => $_SERVER['MYSQL_DATABASE'],
             'host'      => $_SERVER['MYSQL_HOST'],
+            'port'      => 33060,
         ]);
 
         $this->assertInstanceOf(XDevApiOptions::class, $options);
@@ -63,32 +58,27 @@ final class XDevApiOptionsTest extends TestCase
     public function testBadPropertyCallThrowsException()
     {
         $this->expectException(BadMethodCallException::class);
-        $badCall = $this->options->badProperty;
+        $this->options->badProperty;
     }
 
-    public function testCanGetUser()
-    {
-        $this->assertSame('dbuser', $this->options->user);
+    public function addDataProvider() {
+        return [
+            ['user', $_SERVER['MYSQL_USER']],
+            ['password', $_SERVER['MYSQL_PASSWORD']],
+            ['schema', $_SERVER['MYSQL_DATABASE']],
+            ['host', $_SERVER['MYSQL_HOST']],
+            ['port', 33060],
+        ];
     }
 
-    public function testCanGetPassword()
+    /**
+     * @dataProvider addDataProvider
+     * @param string $property
+     * @param mixed $expected
+     */
+    public function testPropertyCallCanGetValue(string $property, $expected)
     {
-        $this->assertSame('654321', $this->options->password);
-    }
-
-    public function testCanGetSchema()
-    {
-        $this->assertSame('dbname', $this->options->schema);
-    }
-
-    public function testCanGetHost()
-    {
-        $this->assertSame('mysql', $this->options->host);
-    }
-
-    public function testCanGetPort()
-    {
-        $this->assertSame(33060, $this->options->port);
+        $this->assertSame($expected, $this->options->$property);
     }
 }
 

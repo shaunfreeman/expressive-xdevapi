@@ -28,9 +28,12 @@
   },
   "require": {
     "php": "^7.1",
+    "ext-mysql_xdevapi": "*",
     "psr/container": "^1.0"
+
   },
   "require-dev": {
+    "ext-uopz": "*",
     "dg/bypass-finals": "^1.1",
     "codeclimate/php-test-reporter": "0.3.x-dev",
     "phpunit/phpunit": "^7.0.1"

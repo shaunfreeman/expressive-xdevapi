@@ -2,12 +2,7 @@ version: '3'
 
 services:
   php-cli:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        uid: "${UID}"
-        user: "${USER}"
+    image: shaunfreeman/php:7.3-cli
     tty: true
     working_dir: /home/xdevapi
     volumes:

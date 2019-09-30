@@ -12,7 +12,7 @@ use function mysql_xdevapi\getSession;
 
 final class SessionFactory
 {
-    private const STRING_DSN = 'mysqlx://%s:%s@%s:%d/%s';
+    private const STRING_DSN = 'mysqlx://%s:%s@%s:%d';
 
     /**
      * @var XDevApiOptions
@@ -21,8 +21,7 @@ final class SessionFactory
 
     public function __invoke(ContainerInterface $container) : Session
     {
-        $xDevApiOptions         = $container->get('config')['xdevapi'] ?? $container->get('xdevapi') ?? [];
-        $this->xDevApiOptions   = XDevApiOptions::fromArray($xDevApiOptions);
+        $this->xDevApiOptions   = $container->get(XDevApiOptions::class);
 
         return getSession($this->formatDsn());
     }
@@ -34,8 +33,7 @@ final class SessionFactory
             $this->xDevApiOptions->user,
             $this->xDevApiOptions->password,
             $this->xDevApiOptions->host,
-            $this->xDevApiOptions->port,
-            $this->xDevApiOptions->schema
+            $this->xDevApiOptions->port
         );
     }
 }

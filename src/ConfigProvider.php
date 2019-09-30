@@ -22,6 +22,7 @@ class ConfigProvider
             'factories'  => [
                 DefaultSchemaFactory::class => DefaultSchemaFactory::class,
                 SessionFactory::class       => SessionFactory::class,
+                XDevApiOptions::class       => XDevApiOptionsFactory::class,
             ],
         ];
     }
