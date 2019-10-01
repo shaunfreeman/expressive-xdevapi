@@ -6,7 +6,15 @@ before_script:
   - sudo apt-get update
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
   - pecl install uopz
-  - printf "\n" | pecl install mysql_xdevapi
+  - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
+  - cd ./mysql_xdevapi
+  - git checkout 8.0.17
+  - phpize
+  - ./configure --enable-mysql-xdevapi --with-boost --with-protobuf
+  - make -j"$(nproc)"
+  - make install
+  - make clean
+  - cd ../
   - echo "extension=uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - echo "extension=mysql_xdevapi.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
