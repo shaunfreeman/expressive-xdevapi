@@ -1,22 +1,18 @@
 dist: bionic
 
 language: php
-sudo: enabled
-
-services:
-  - docker
 
 before_install:
   - sudo apt-get update
-  - sudo pip install docker-compose
-  - docker-compose --version
+
+before_script:
+  - pecl install uopz
+  - pecl install mysql_xdevapi
   - composer self-update
 
 script:
-  - docker-compose -f ./docker-compose-unittest.yml up -d
-  - docker exec -it expressive-xdevapi_php-cli_1 composer install
-  - docker exec -it expressive-xdevapi_php-cli_1 php ./vendor/bin/phpunit -c ./phpunit.xml
-  - docker stop $(docker ps -a -q)
+  - composer install
+  - php ./vendor/bin/phpunit -c ./phpunit.xml
 
 after_script:
   - php ./vendor/bin/test-reporter --coverage-report=build/clover.xml
