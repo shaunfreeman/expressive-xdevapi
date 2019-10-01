@@ -2,12 +2,13 @@ dist: bionic
 
 language: php
 
-before_install:
-  - sudo apt-get update
-
 before_script:
+  - sudo apt-get update
+  - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
   - pecl install uopz
-  - pecl install mysql_xdevapi
+  - printf "\n" | pecl install mysql_xdevapi
+  - echo "extension=uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo "extension=mysql_xdevapi.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
 
 script:
