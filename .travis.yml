@@ -1,6 +1,10 @@
 dist: bionic
 
 language: php
+php:
+  - 7.1
+  - 7.2
+  - 7.3
 
 before_script:
   - sudo apt-get update
@@ -15,7 +19,6 @@ before_script:
   - make install
   - make clean
   - cd ../
-  - echo "extension=uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - echo "extension=mysql_xdevapi.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
 
@@ -24,7 +27,7 @@ script:
   - php ./vendor/bin/phpunit -c ./phpunit.xml
 
 after_script:
-  - php ./vendor/bin/test-reporter --coverage-report=build/clover.xml
+  - if [[ $TEST_COVERAGE == 'true' ]]; then php ./vendor/bin/test-reporter --coverage-report=build/clover.xml; fi
 
 matrix:
   include:
