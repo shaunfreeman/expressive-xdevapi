@@ -19,7 +19,7 @@ script:
   - docker stop $(docker ps -a -q)
 
 after_script:
-  - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/test-reporter --coverage-report=build/clover.xml ; fi
+  - php ./vendor/bin/test-reporter --coverage-report=build/clover.xml
 
 matrix:
   include:
