@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file, in reverse 
 
 - Testing against PHP 7.2.
 - Change log.
+- `XDevApi\Paginator\CollectionAdapter` for `Zend/Paginator`
+- `XDevApi\Repository\CollectionDocumentInterface`
 
 ### Changed
 
