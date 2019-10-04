@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  php-cli:
-    image: shaunfreeman/php:cli-latest
-    tty: true
-    working_dir: /home/xdevapi
-    volumes:
-      - .:/home/xdevapi
