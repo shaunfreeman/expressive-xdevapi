@@ -11,7 +11,7 @@ use mysql_xdevapi\Schema;
 use mysql_xdevapi\Session;
 use Psr\Container\ContainerInterface;
 
-class DefaultSchemaFactory
+final class DefaultSchemaFactory
 {
     public function __invoke(ContainerInterface $container): Schema
     {

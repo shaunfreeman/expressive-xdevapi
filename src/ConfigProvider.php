@@ -7,7 +7,7 @@ namespace XDevApi;
 /**
  * The configuration provider for the XDevApi module
  */
-class ConfigProvider
+final class ConfigProvider
 {
     public function __invoke() : array
     {

@@ -8,7 +8,7 @@ namespace XDevApi;
 
 use Psr\Container\ContainerInterface;
 
-class XDevApiOptionsFactory
+final class XDevApiOptionsFactory
 {
     public function __invoke(ContainerInterface $container): XDevApiOptions
     {
