@@ -28,9 +28,10 @@
   },
   "require": {
     "php": "^7.2",
+    "ext-json": "*",
     "ext-mysql_xdevapi": "*",
-    "psr/container": "^1.0"
-
+    "psr/container": "^1.0",
+    "ramsey/uuid": "3.8.0"
   },
   "require-dev": {
     "ext-uopz": "*",
@@ -60,6 +61,6 @@
     }
   },
   "scripts": {
-    "unit-test": "php ./vendor/bin/phpunit -v"
+    "unittest": "php ./vendor/bin/phpunit -v"
   }
 }

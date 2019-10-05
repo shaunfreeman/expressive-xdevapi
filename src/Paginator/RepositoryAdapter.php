@@ -7,18 +7,19 @@ namespace XDevApi\Paginator;
 
 
 use XDevApi\Repository\CollectionDocumentInterface;
+use XDevApi\Repository\RepositoryInterface;
 use Zend\Paginator\Adapter\AdapterInterface;
 
-final class CollectionAdapter implements AdapterInterface
+final class RepositoryAdapter implements AdapterInterface
 {
     /**
      * @var CollectionDocumentInterface
      */
-    private $collectionDocument;
+    private $repository;
 
-    public function __construct(CollectionDocumentInterface $collectionDocument)
+    public function __construct(RepositoryInterface $repository)
     {
-        $this->collectionDocument = $collectionDocument;
+        $this->repository = $repository;
     }
 
     /**
@@ -30,7 +31,7 @@ final class CollectionAdapter implements AdapterInterface
      */
     public function getItems($offset, $itemCountPerPage): array
     {
-        return $this->collectionDocument->findAll($offset, $itemCountPerPage);
+        return $this->repository->findAll($offset, $itemCountPerPage);
     }
 
     /**
@@ -39,8 +40,6 @@ final class CollectionAdapter implements AdapterInterface
      */
     public function count(): int
     {
-        return $this->collectionDocument
-            ->getCollection()
-            ->count();
+        return $this->repository->count();
     }
 }

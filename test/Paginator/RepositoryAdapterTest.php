@@ -8,14 +8,15 @@ use mysql_xdevapi\Collection;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
-use XDevApi\Paginator\CollectionAdapter;
+use XDevApi\Paginator\RepositoryAdapter;
 use XDevApi\Repository\CollectionDocumentInterface;
+use XDevApi\Repository\RepositoryInterface;
 use Zend\Paginator\Adapter\AdapterInterface;
 
-class CollectionAdapterTest extends TestCase
+class RepositoryAdapterTest extends TestCase
 {
     /**
-     * @var CollectionDocumentInterface
+     * @var RepositoryInterface
      */
     private $repository;
 
@@ -23,29 +24,26 @@ class CollectionAdapterTest extends TestCase
     {
         parent::setUp();
 
-        /** @var CollectionDocumentInterface|ObjectProphecy $repository */
-        $repository = $this->prophesize(CollectionDocumentInterface::class);
-        /** @var Collection|ObjectProphecy $collection */
-        $collection = $this->prophesize(Collection::class);
-        $collection->count()->willReturn(1);
+        /** @var RepositoryInterface|ObjectProphecy $repository */
+        $repository = $this->prophesize(RepositoryInterface::class);
+
+        $repository->count()->willReturn(1);
         $repository->findAll(Argument::type('integer'), Argument::type('integer'))
             ->willReturn([]);
-
-        $repository->getCollection()->willReturn($collection->reveal());
 
         $this->repository = $repository;
     }
 
     public function testCanCreateCollectionAdapter()
     {
-        $adapter = new CollectionAdapter($this->repository->reveal());
+        $adapter = new RepositoryAdapter($this->repository->reveal());
 
         $this->assertInstanceOf(AdapterInterface::class, $adapter);
     }
 
     public function testGetItems()
     {
-        $adapter = new CollectionAdapter($this->repository->reveal());
+        $adapter = new RepositoryAdapter($this->repository->reveal());
 
         $result = $adapter->getItems(0, 25);
 
@@ -54,7 +52,7 @@ class CollectionAdapterTest extends TestCase
 
     public function testCount()
     {
-        $adapter = new CollectionAdapter($this->repository->reveal());
+        $adapter = new RepositoryAdapter($this->repository->reveal());
         $count = $adapter->count();
 
         $this->assertSame(1, $count);

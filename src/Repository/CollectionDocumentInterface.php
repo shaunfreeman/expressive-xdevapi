@@ -8,17 +8,28 @@ namespace XDevApi\Repository;
 
 use mysql_xdevapi\Collection;
 use mysql_xdevapi\Result;
-use mysql_xdevapi\Schema;
+use XDevApi\Entity\DocumentEntityInterface;
 
-interface CollectionDocumentInterface
+interface CollectionDocumentInterface extends RepositoryInterface
 {
-    public function __construct(Schema $schema);
-
+    /**
+     * Get collection from the database.
+     * @return Collection
+     */
     public function getCollection(): Collection;
 
-    public function findAll(int $offset, int $limit): array;
+    /**
+     * Save entity to database either creates a new document or
+     * replaces an existing one.
+     * @param DocumentEntityInterface $entity
+     * @return Result
+     */
+    public function save(DocumentEntityInterface $entity): Result;
 
-    public function save(string $doc): Result;
-
-    public function delete(string $id): Result;
+    /**
+     * Deletes entity from database
+     * @param DocumentEntityInterface $entity
+     * @return Result
+     */
+    public function delete(DocumentEntityInterface $entity): Result;
 }
