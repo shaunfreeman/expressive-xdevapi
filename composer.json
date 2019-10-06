@@ -31,15 +31,15 @@
     "ext-json": "*",
     "ext-mysql_xdevapi": "*",
     "psr/container": "^1.0",
-    "ramsey/uuid": "3.8.0"
+    "ramsey/uuid": "^3.8"
   },
   "require-dev": {
     "ext-uopz": "*",
     "dg/bypass-finals": "^1.1",
-    "codeclimate/php-test-reporter": "0.3.x-dev",
-    "phpunit/phpunit": "^7.0.1",
-    "zendframework/zend-paginator": "^2.8.2",
-    "zendframework/zend-hydrator": "3.0.2"
+    "codeclimate/php-test-reporter": "^0.3",
+    "phpunit/phpunit": "^7.0",
+    "zendframework/zend-paginator": "^2.8",
+    "zendframework/zend-hydrator": "3.0"
   },
   "suggest": {
     "zendframework/zend-paginator": "^2.8, to support pagination usage",
