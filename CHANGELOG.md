@@ -26,6 +26,7 @@ Initial release
 
 - issue #7 removed final form `XDevApi\Repository\CollectionRepository` for using as a base
   repository.
+- fixed composer versions.
 
 ## 1.2.0 - 06/10/2019
 
