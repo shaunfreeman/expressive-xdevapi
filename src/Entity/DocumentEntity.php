@@ -9,7 +9,7 @@ namespace XDevApi\Entity;
 use Exception;
 use Ramsey\Uuid\Uuid;
 
-class DocumentEntity implements DocumentEntityInterface
+final class DocumentEntity implements DocumentEntityInterface
 {
     /**
      * @var Uuid

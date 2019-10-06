@@ -11,7 +11,7 @@ use mysql_xdevapi\Result;
 use mysql_xdevapi\Schema;
 use XDevApi\Entity\DocumentEntityInterface;
 
-class CollectionRepository implements CollectionDocumentInterface
+final class CollectionRepository implements CollectionDocumentInterface
 {
     /**
      * @var Collection
