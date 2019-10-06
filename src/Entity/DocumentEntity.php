@@ -62,7 +62,7 @@ class DocumentEntity implements DocumentEntityInterface
     /**
      * Construct a new entity from array data.
      * @param array $array
-     * @return static
+     * @return static|DocumentEntity
      * @throws Exception
      */
     public static function fromArray(array $array): EntityInterface
