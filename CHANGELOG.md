@@ -2,15 +2,15 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.2.2 - TBD
+## 1.3.0 - TBD
 
 ### Added
 
-- Everything.
+- `Xdevapi\ValueObject\Uuid`
 
 ### Changed
 
-- Nothing.
+- Added Known issues to `README.md`.
 
 ### Deprecated
 
