@@ -52,3 +52,13 @@ return [
     ],
 ];
 ```
+
+## Known Issues
+There seems to be a bug when running `mysql_devapi` with `OPcache`, where `CollectionFind::limit()` and `CollectionFind::offset()` will return `bool` when the `OPcache` is enabled.
+
+To workaround this make sure the `OPcache` extension is loaded before the `mysql_xdevapi` extension. 
+
+You may also need to add the line below to your `opcache.ini` file or at the end of your `php.ini` file
+``` 
+opcache.optimization_level=0
+```
