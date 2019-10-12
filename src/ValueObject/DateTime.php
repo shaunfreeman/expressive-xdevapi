@@ -9,7 +9,7 @@ namespace XDevApi\ValueObject;
 use DateTimeImmutable;
 use JsonSerializable;
 
-class DateTime extends DateTimeImmutable implements JsonSerializable
+final class DateTime extends DateTimeImmutable implements JsonSerializable
 {
     /**
      * @return string
