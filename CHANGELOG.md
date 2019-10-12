@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
+- `XdevApi\ValueObject\DateTime`
 - `Xdevapi\ValueObject\Uuid`
 
 ### Changed
