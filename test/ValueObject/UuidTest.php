@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace XDevApiTest\ValueObject;
 
 use InvalidArgumentException;
-use JsonSerializable;
 use XDevApi\ValueObject\Uuid;
 use PHPUnit\Framework\TestCase;
 
@@ -51,13 +50,6 @@ class UuidTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         new Uuid('5fd4-7c55b2d34-8bb9888f-9679f18-f290');
 
-    }
-
-    public function testCanReturnJsonSerialise()
-    {
-        $uuid = new Uuid('d1ec9c0f-4bea-41a8-84eb-3d79d39e5025');
-        $this->assertInstanceOf(JsonSerializable::class, $uuid);
-        $this->assertSame('"d1ec9c0f-4bea-41a8-84eb-3d79d39e5025"', json_encode($uuid));
     }
 
     public function testGetHex()

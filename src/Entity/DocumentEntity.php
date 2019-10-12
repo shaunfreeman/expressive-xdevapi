@@ -7,7 +7,7 @@ namespace XDevApi\Entity;
 
 
 use Exception;
-use Ramsey\Uuid\Uuid;
+use XDevApi\ValueObject\Uuid;
 
 final class DocumentEntity implements DocumentEntityInterface
 {
@@ -20,15 +20,6 @@ final class DocumentEntity implements DocumentEntityInterface
      * @var array
      */
     private $doc = [];
-
-    /**
-     * DocumentEntity constructor.
-     * @throws Exception
-     */
-    private function __construct()
-    {
-        $this->_id = Uuid::uuid4();
-    }
 
     /**
      * Returns a 32 character uuid, just the hex version with no dashes.
@@ -69,10 +60,8 @@ final class DocumentEntity implements DocumentEntityInterface
     {
         $entity = new static();
 
-        if (array_key_exists('_id', $array)) {
-            $entity->_id = Uuid::fromString($array['_id']);
-            unset($array['_id']);
-        }
+        $entity->_id = new Uuid($array['_id'] ?? null);
+        unset($array['_id']);
 
         $entity->doc = $array;
 

@@ -12,10 +12,10 @@ use mysql_xdevapi\Schema;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
-use Ramsey\Uuid\Uuid;
 use XDevApi\Entity\DocumentEntityInterface;
 use XDevApi\Repository\CollectionDocumentInterface;
 use XDevApi\Repository\CollectionRepository;
+use XDevApi\ValueObject\Uuid;
 use XDevApiTest\Assets\TestDocumentEntity;
 
 class CollectionRepositoryTest extends TestCase
@@ -88,7 +88,8 @@ class CollectionRepositoryTest extends TestCase
 
     public function testCanSaveCollectionDocument()
     {
-        $uuid = Uuid::uuid4()->getHex();
+        $uuid = new Uuid();
+        $uuid = $uuid->getHex();
 
         /** @var DocumentEntityInterface|ObjectProphecy $entity */
         $entity = $this->prophesize(DocumentEntityInterface::class);
@@ -110,7 +111,8 @@ class CollectionRepositoryTest extends TestCase
 
     public function testCanDeleteCollectionDocument()
     {
-        $uuid = Uuid::uuid4()->getHex();
+        $uuid = new Uuid();
+        $uuid = $uuid->getHex();
 
         /** @var DocumentEntityInterface|ObjectProphecy $entity */
         $entity = $this->prophesize(DocumentEntityInterface::class);

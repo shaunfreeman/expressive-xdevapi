@@ -8,9 +8,8 @@ namespace XDevApi\ValueObject;
 
 use Exception;
 use InvalidArgumentException;
-use JsonSerializable;
 
-class Uuid implements JsonSerializable
+final class Uuid
 {
     /**
      * @var string
@@ -55,14 +54,6 @@ class Uuid implements JsonSerializable
      * @return string
      */
     public function __toString(): string
-    {
-        return $this->toString();
-    }
-
-    /**
-     * @return string
-     */
-    public function jsonSerialize():string
     {
         return $this->toString();
     }

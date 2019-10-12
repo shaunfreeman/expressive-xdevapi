@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace XDevApiTest\Entity;
 
 use PHPUnit\Framework\TestCase;
-use Ramsey\Uuid\Uuid;
 use XDevApi\Entity\DocumentEntity;
 use XDevApi\Entity\DocumentEntityInterface;
+use XDevApi\ValueObject\Uuid;
 
 class DocumentEntityTest extends TestCase
 {
@@ -29,7 +29,7 @@ class DocumentEntityTest extends TestCase
 
     public function testSetIdFromNewDocument()
     {
-        $id     = Uuid::uuid4();
+        $id     = new Uuid();
         $entity = DocumentEntity::fromArray(['_id' => $id->toString()]);
 
         $this->assertSame($id->getHex(), $entity->getId());
@@ -37,16 +37,16 @@ class DocumentEntityTest extends TestCase
 
     public function testGetArrayCopy()
     {
-        $id = Uuid::uuid4();
-        $entity = DocumentEntity::fromArray(['_id' => $id, 'test_field' => 'test']);
+        $id = new Uuid();
+        $entity = DocumentEntity::fromArray(['_id' => $id->toString(), 'test_field' => 'test']);
 
         $this->assertSame(['_id' => $id->toString(), 'test_field' => 'test'], $entity->getArrayCopy());
     }
 
     public function testJsonSerialize()
     {
-        $id = Uuid::uuid4();
-        $entity = DocumentEntity::fromArray(['_id' => $id, 'test_field' => 'test']);
+        $id = new Uuid();
+        $entity = DocumentEntity::fromArray(['_id' => $id->toString(), 'test_field' => 'test']);
 
         $this->assertSame('{"test_field":"test"}', json_encode($entity));
     }
