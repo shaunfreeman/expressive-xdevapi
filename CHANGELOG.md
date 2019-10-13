@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.3.0 - TBD
+## 1.3.0 - 13\10\2019
 
 ### Added
 
@@ -33,7 +33,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- Everything.
+- Nothing.
 
 ### Changed
 
