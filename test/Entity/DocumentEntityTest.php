@@ -13,6 +13,26 @@ class DocumentEntityTest extends TestCase
 {
     public function testCanCreateNewDocumentEntity()
     {
+        $entity = new DocumentEntity();
+
+        $this->assertInstanceOf(DocumentEntityInterface::class, $entity);
+        $this->assertInstanceOf(DocumentEntity::class, $entity);
+    }
+
+    public function testCanCreateNewDocumentEntityWithArguments()
+    {
+        $entity = new DocumentEntity('1e1d9e34b99c48f19974402247442ca2', [
+            'test_field1' => 'test1',
+            'test_field2' => 'test2',
+            'test_field3' => 'test3',
+        ]);
+
+        $this->assertSame('1e1d9e34b99c48f19974402247442ca2', $entity->getId());
+        $this->assertInstanceOf(DocumentEntity::class, $entity);
+    }
+
+    public function testCanCreateNewDocumentEntityFromArray()
+    {
         $entity = DocumentEntity::fromArray([]);
 
         $this->assertInstanceOf(DocumentEntityInterface::class, $entity);

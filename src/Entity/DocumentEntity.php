@@ -22,6 +22,17 @@ final class DocumentEntity implements DocumentEntityInterface
     private $doc = [];
 
     /**
+     * @param string|null $_id
+     * @param array $doc
+     * @throws Exception
+     */
+    public function __construct(?string $_id = null, array $doc = [])
+    {
+        $this->_id = new Uuid($_id);
+        $this->doc = $doc;
+    }
+
+    /**
      * Returns a 32 character uuid, just the hex version with no dashes.
      * @return string
      */
@@ -58,12 +69,10 @@ final class DocumentEntity implements DocumentEntityInterface
      */
     public static function fromArray(array $array): EntityInterface
     {
-        $entity = new static();
-
-        $entity->_id = new Uuid($array['_id'] ?? null);
+        $uuid = $array['_id'] ?? null;
         unset($array['_id']);
 
-        $entity->doc = $array;
+        $entity = new static($uuid, $array);
 
         return $entity;
     }

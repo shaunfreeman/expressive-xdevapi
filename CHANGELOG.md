@@ -6,11 +6,15 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
+- `XDevApi\Hydrator\DocumentHydrator`
 - `XdevApi\ValueObject\DateTime`
 - `Xdevapi\ValueObject\Uuid`
 
 ### Changed
 
+- Constructor in `XdevApi\Entity\DocumentEntity` changed to public 
+  with constructor arguments as required, if Uuid is blank string
+  then new Uuid object with be created.
 - Added Known issues to `README.md`.
 
 ### Deprecated
