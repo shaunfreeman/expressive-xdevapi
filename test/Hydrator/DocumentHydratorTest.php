@@ -13,7 +13,7 @@ use Zend\Hydrator\HydratorInterface;
 class DocumentHydratorTest extends TestCase
 {
     private $testArray = [
-        '_id' => '1e1d9e34-b99c-48f1-9974-402247442ca2',
+        'id' => '1e1d9e34-b99c-48f1-9974-402247442ca2',
         'test_field1' => 'test1',
         'test_field2' => 'test2',
         'test_field3' => 'test3',

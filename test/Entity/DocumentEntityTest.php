@@ -60,7 +60,7 @@ class DocumentEntityTest extends TestCase
         $id = new Uuid();
         $entity = DocumentEntity::fromArray(['_id' => $id->toString(), 'test_field' => 'test']);
 
-        $this->assertSame(['_id' => $id->toString(), 'test_field' => 'test'], $entity->getArrayCopy());
+        $this->assertSame(['id' => $id->toString(), 'test_field' => 'test'], $entity->getArrayCopy());
     }
 
     public function testJsonSerialize()

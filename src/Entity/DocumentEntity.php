@@ -48,7 +48,7 @@ final class DocumentEntity implements DocumentEntityInterface
     public function getArrayCopy(): array
     {
         $array = [];
-        $array['_id'] = (string) $this->_id;
+        $array['id'] = (string) $this->_id;
         return array_merge($array, $this->doc);
     }
 
