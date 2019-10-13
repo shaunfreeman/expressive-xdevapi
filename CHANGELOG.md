@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 1.4.0 - TBD
+
+### Added
+
+- `XDevApi\Entity\DocumentEntityCollection`.
+
+### Changed
+
+- Added check for `id` in `XDevApi\Entity\DocumentEntity`
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing. 
+
 ## 1.3.1 - 13\10\2019
 
 Initial release

@@ -69,8 +69,8 @@ final class DocumentEntity implements DocumentEntityInterface
      */
     public static function fromArray(array $array): EntityInterface
     {
-        $uuid = $array['_id'] ?? null;
-        unset($array['_id']);
+        $uuid = $array['_id'] ?? $array['id'] ?? null;
+        unset($array['_id'], $array['id']);
 
         $entity = new static($uuid, $array);
 
