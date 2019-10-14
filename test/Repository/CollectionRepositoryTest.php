@@ -18,6 +18,14 @@ use XDevApi\Repository\CollectionRepository;
 use XDevApi\ValueObject\Uuid;
 use XDevApiTest\Assets\TestDocumentEntity;
 
+class RepositoryOverride extends CollectionRepository
+{
+    /**
+     * @var string
+     */
+    protected $findAllSort = '$.date_created ASC';
+}
+
 class CollectionRepositoryTest extends TestCase
 {
     /**
@@ -29,6 +37,11 @@ class CollectionRepositoryTest extends TestCase
      * @var Collection|ObjectProphecy
      */
     private $collection;
+
+    private $dbRetrunArray = [
+        ['_id' => '235d3f0038e9483da685a6c28a46a078', 'test_field1' => 'test1'],
+        ['_id' => '1c75382efc8545bb8086da6ad91a3230', 'test_field2' => 'test2'],
+    ];
 
     public function setUp()
     {
@@ -68,11 +81,11 @@ class CollectionRepositoryTest extends TestCase
         $this->assertSame('test', $defaultCollection->getName());
     }
 
-    public function testFindAllWillReturnArray()
+    public function testFindAllWillReturnHydratedArray()
     {
         /** @var DocResult $docResult */
         $docResult = $this->prophesize(DocResult::class);
-        $docResult->fetchAll()->shouldBeCalledOnce()->willReturn([]);
+        $docResult->fetchAll()->shouldBeCalledOnce()->willReturn($this->dbRetrunArray);
         /** @var CollectionFind $collectionFind */
         $collectionFind = $this->prophesize(CollectionFind::class);
         $collectionFind->offset(0)->shouldBeCalledOnce()->willReturn($collectionFind);
@@ -83,7 +96,30 @@ class CollectionRepositoryTest extends TestCase
         $collectionRepository = new CollectionRepository($this->schema->reveal(), 'test');
         $result = $collectionRepository->findAll(0, 25);
 
-        $this->assertSame([], $result);
+        foreach ($result as $row) {
+            $this->assertInstanceOf(DocumentEntityInterface::class, $row);
+        }
+    }
+
+    public function testFindAllWillCallFindAllSort()
+    {
+        /** @var DocResult $docResult */
+        $docResult = $this->prophesize(DocResult::class);
+        $docResult->fetchAll()->shouldBeCalledOnce()->willReturn($this->dbRetrunArray);
+        /** @var CollectionFind $collectionFind */
+        $collectionFind = $this->prophesize(CollectionFind::class);
+        $collectionFind->offset(0)->shouldBeCalledOnce()->willReturn($collectionFind);
+        $collectionFind->limit(25)->shouldBeCalledOnce()->willReturn($collectionFind);
+        $collectionFind->sort('$.date_created ASC')->shouldBeCalledOnce()->willReturn($collectionFind);
+        $collectionFind->execute()->shouldBeCalledOnce()->willReturn($docResult->reveal());
+        $this->collection->find('true')->willReturn($collectionFind->reveal());
+
+        $collectionRepository = new RepositoryOverride($this->schema->reveal(), 'test');
+        $result = $collectionRepository->findAll(0, 25);
+
+        foreach ($result as $row) {
+            $this->assertInstanceOf(DocumentEntityInterface::class, $row);
+        }
     }
 
     public function testCanSaveCollectionDocument()

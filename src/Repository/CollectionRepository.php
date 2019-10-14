@@ -6,13 +6,36 @@ declare(strict_types=1);
 namespace XDevApi\Repository;
 
 
+use Exception;
 use mysql_xdevapi\Collection;
 use mysql_xdevapi\Result;
 use mysql_xdevapi\Schema;
+use XDevApi\Entity\DocumentEntity;
 use XDevApi\Entity\DocumentEntityInterface;
+use XDevApi\Hydrator\DocumentHydrator;
 
 class CollectionRepository implements CollectionDocumentInterface
 {
+    /**
+     * @var string
+     */
+    protected $findAllString = 'true';
+
+    /**
+     * @var string|null
+     */
+    protected $findAllSort = null;
+
+    /**
+     * @var string
+     */
+    protected $hydrator = DocumentHydrator::class;
+
+    /**
+     * @var string
+     */
+    protected $entity = DocumentEntity::class;
+
     /**
      * @var Collection
      */
@@ -56,15 +79,26 @@ class CollectionRepository implements CollectionDocumentInterface
      * @param int $offset
      * @param int $limit
      * @return array
+     * @throws Exception
      */
     public function findAll(int $offset, int $limit): array
     {
-        $result = $this->getCollection()
-            ->find('true')
+        $query = $this->getCollection()
+            ->find($this->findAllString)
             ->offset($offset)
-            ->limit($limit)
-            ->execute()
+            ->limit($limit);
+
+        if (null !== $this->findAllSort) {
+            $query->sort($this->findAllSort);
+        }
+
+        $result = $query->execute()
             ->fetchAll();
+
+        if (class_exists($this->hydrator)) {
+            $result = $this->hydrate($result);
+        }
+
         return $result;
     }
 
@@ -92,5 +126,25 @@ class CollectionRepository implements CollectionDocumentInterface
     {
         return $this->getCollection()
             ->removeOne($entity->getId());
+    }
+
+    /**
+     * @param array $rows
+     * @return array
+     * @throws Exception
+     */
+    private function hydrate(array $rows): array
+    {
+        /** @var DocumentHydrator $hydrator */
+        $hydrator   = new $this->hydrator;
+        /** @var DocumentEntity $entity */
+        $entity     = new $this->entity;
+        $array      = [];
+
+        foreach ($rows as $row) {
+            $array[] = $hydrator->hydrate($row, $entity);
+        }
+
+        return $array;
     }
 }
