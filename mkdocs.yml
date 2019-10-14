@@ -1,0 +1,7 @@
+docs_dir: docs
+site_dir: docs/html
+nav:
+  - Home: index.md
+site_name: Expressive X DevApi
+repo_url: https://github.com/shaunfreeman/expressive-xdevapi
+theme: readthedocs
