@@ -26,8 +26,6 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ## 1.3.1 - 13\10\2019
 
-Initial release
-
 ### Added
 
 - Nothing.
