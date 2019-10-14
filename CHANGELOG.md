@@ -7,9 +7,16 @@ All notable changes to this project will be documented in this file, in reverse 
 ### Added
 
 - `XDevApi\Entity\DocumentEntityCollection`.
+- `XdevApi\Repository\CollectionRepository::hydrate()`
+- Added new properties for `XdevApi\Repository\CollectionRepository`:
+    - findAllString
+    - findAllSort
+    - hydrator
+    - entity
 
 ### Changed
 
+- `XdevApi\Repository\CollectionRepository::findAll()` will now automatically hydrate array with `XDevApi\Entity\DocumentEntity`.
 - Changed `zendframework/zend-paginator` and `zendframework/zend-hydrator` to be required dependencies.
 - Added check for `id` in `XDevApi\Entity\DocumentEntity`
 
