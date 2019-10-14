@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60873c9c8cdb51d82a98f0a646d2cc84",
+    "content-hash": "98f42bef89de8b371bd0aae232d83828",
     "packages": [
         {
             "name": "psr/container",
@@ -54,6 +54,179 @@
                 "psr"
             ],
             "time": "2019-10-04T14:07:35+00:00"
+        },
+        {
+            "name": "zendframework/zend-hydrator",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-hydrator.git",
+                "reference": "baa10aaafe92559d2579d3dc8417b7b690f260bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/baa10aaafe92559d2579d3dc8417b7b690f260bc",
+                "reference": "baa10aaafe92559d2579d3dc8417b7b690f260bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2",
+                "zendframework/zend-stdlib": "^3.2.1"
+            },
+            "require-dev": {
+                "phpspec/prophecy": "^1.7.5",
+                "phpstan/phpstan": "^0.10.5",
+                "phpunit/phpunit": "^7.5",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-eventmanager": "^3.2.1",
+                "zendframework/zend-modulemanager": "^2.8",
+                "zendframework/zend-serializer": "^2.9",
+                "zendframework/zend-servicemanager": "^3.3.2"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "^3.2, to support aggregate hydrator usage",
+                "zendframework/zend-serializer": "^2.9, to use the SerializableStrategy",
+                "zendframework/zend-servicemanager": "^3.3, to support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release-2.4": "2.4.x-dev",
+                    "dev-master": "3.0.x-dev",
+                    "dev-develop": "3.1.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Hydrator",
+                    "config-provider": "Zend\\Hydrator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Serialize objects to arrays, and vice versa",
+            "keywords": [
+                "ZendFramework",
+                "hydrator",
+                "zf"
+            ],
+            "time": "2018-12-10T17:48:39+00:00"
+        },
+        {
+            "name": "zendframework/zend-paginator",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-paginator.git",
+                "reference": "96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-paginator/zipball/96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2",
+                "reference": "96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^5.6",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2.1 || ^5.7.15",
+                "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-config": "^2.6.0",
+                "zendframework/zend-db": "^2.9.2",
+                "zendframework/zend-filter": "^2.6.1",
+                "zendframework/zend-json": "^2.6.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-view": "^2.6.3"
+            },
+            "suggest": {
+                "zendframework/zend-cache": "Zend\\Cache component to support cache features",
+                "zendframework/zend-db": "Zend\\Db component",
+                "zendframework/zend-filter": "Zend\\Filter component",
+                "zendframework/zend-json": "Zend\\Json component",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
+                "zendframework/zend-view": "Zend\\View component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8.x-dev",
+                    "dev-develop": "2.9.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Paginator",
+                    "config-provider": "Zend\\Paginator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Paginator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Paginate collections of data from arbitrary sources",
+            "keywords": [
+                "ZendFramework",
+                "paginator",
+                "zf"
+            ],
+            "time": "2019-08-21T13:36:23+00:00"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "519a966dedc32af62765736eba9900c270e419d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/519a966dedc32af62765736eba9900c270e419d8",
+                "reference": "519a966dedc32af62765736eba9900c270e419d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.13",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SPL extensions, array utilities, error handlers, and more",
+            "keywords": [
+                "ZendFramework",
+                "stdlib",
+                "zf"
+            ],
+            "time": "2019-02-07T05:36:36+00:00"
         }
     ],
     "packages-dev": [
@@ -1110,12 +1283,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661"
+                "reference": "bec7a7cd934bf138603759b1b0ba223696a41765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/316afa6888d2562e04aeb67ea7f2017a0eb41661",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bec7a7cd934bf138603759b1b0ba223696a41765",
+                "reference": "bec7a7cd934bf138603759b1b0ba223696a41765",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1359,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-09-14T09:08:39+00:00"
+            "time": "2019-10-14T04:31:32+00:00"
         },
         {
             "name": "psr/log",
@@ -2612,179 +2785,6 @@
                 "validate"
             ],
             "time": "2019-08-24T08:43:50+00:00"
-        },
-        {
-            "name": "zendframework/zend-hydrator",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-hydrator.git",
-                "reference": "baa10aaafe92559d2579d3dc8417b7b690f260bc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/baa10aaafe92559d2579d3dc8417b7b690f260bc",
-                "reference": "baa10aaafe92559d2579d3dc8417b7b690f260bc",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2",
-                "zendframework/zend-stdlib": "^3.2.1"
-            },
-            "require-dev": {
-                "phpspec/prophecy": "^1.7.5",
-                "phpstan/phpstan": "^0.10.5",
-                "phpunit/phpunit": "^7.5",
-                "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-eventmanager": "^3.2.1",
-                "zendframework/zend-modulemanager": "^2.8",
-                "zendframework/zend-serializer": "^2.9",
-                "zendframework/zend-servicemanager": "^3.3.2"
-            },
-            "suggest": {
-                "zendframework/zend-eventmanager": "^3.2, to support aggregate hydrator usage",
-                "zendframework/zend-serializer": "^2.9, to use the SerializableStrategy",
-                "zendframework/zend-servicemanager": "^3.3, to support hydrator plugin manager usage"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-release-2.4": "2.4.x-dev",
-                    "dev-master": "3.0.x-dev",
-                    "dev-develop": "3.1.x-dev"
-                },
-                "zf": {
-                    "component": "Zend\\Hydrator",
-                    "config-provider": "Zend\\Hydrator\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Hydrator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Serialize objects to arrays, and vice versa",
-            "keywords": [
-                "ZendFramework",
-                "hydrator",
-                "zf"
-            ],
-            "time": "2018-12-10T17:48:39+00:00"
-        },
-        {
-            "name": "zendframework/zend-paginator",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-paginator.git",
-                "reference": "96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-paginator/zipball/96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2",
-                "reference": "96e58c0c00a1c4986a1d5e0b1fed30b30c33cdc2",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0 || ^5.6",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.2.1 || ^5.7.15",
-                "zendframework/zend-cache": "^2.6.1",
-                "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-config": "^2.6.0",
-                "zendframework/zend-db": "^2.9.2",
-                "zendframework/zend-filter": "^2.6.1",
-                "zendframework/zend-json": "^2.6.1",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-view": "^2.6.3"
-            },
-            "suggest": {
-                "zendframework/zend-cache": "Zend\\Cache component to support cache features",
-                "zendframework/zend-db": "Zend\\Db component",
-                "zendframework/zend-filter": "Zend\\Filter component",
-                "zendframework/zend-json": "Zend\\Json component",
-                "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
-                "zendframework/zend-view": "Zend\\View component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8.x-dev",
-                    "dev-develop": "2.9.x-dev"
-                },
-                "zf": {
-                    "component": "Zend\\Paginator",
-                    "config-provider": "Zend\\Paginator\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Paginator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Paginate collections of data from arbitrary sources",
-            "keywords": [
-                "ZendFramework",
-                "paginator",
-                "zf"
-            ],
-            "time": "2019-08-21T13:36:23+00:00"
-        },
-        {
-            "name": "zendframework/zend-stdlib",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "519a966dedc32af62765736eba9900c270e419d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/519a966dedc32af62765736eba9900c270e419d8",
-                "reference": "519a966dedc32af62765736eba9900c270e419d8",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0"
-            },
-            "require-dev": {
-                "phpbench/phpbench": "^0.13",
-                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
-                "zendframework/zend-coding-standard": "~1.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2.x-dev",
-                    "dev-develop": "3.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Stdlib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "SPL extensions, array utilities, error handlers, and more",
-            "keywords": [
-                "ZendFramework",
-                "stdlib",
-                "zf"
-            ],
-            "time": "2019-02-07T05:36:36+00:00"
         }
     ],
     "aliases": [],

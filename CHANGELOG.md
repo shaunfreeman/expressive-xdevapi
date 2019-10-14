@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changed
 
+- Changed `zendframework/zend-paginator` and `zendframework/zend-hydrator` to be required dependencies.
 - Added check for `id` in `XDevApi\Entity\DocumentEntity`
 
 ### Deprecated
