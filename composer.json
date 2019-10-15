@@ -57,6 +57,8 @@
     }
   },
   "scripts": {
-    "unittest": "php ./vendor/bin/phpunit -v"
+    "unittest": "php ./vendor/bin/phpunit -v",
+    "cs-check": "php ./vendor/bin/phpcs",
+    "cs-fix": "php ./vendor/bin/phpcbf"
   }
 }

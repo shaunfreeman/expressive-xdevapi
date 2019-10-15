@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
+- Added Standards check to travis ci.
 - Added MkDocs ready to start the documentation.
 - `XDevApi\Entity\DocumentEntityCollection`.
 - `XdevApi\Repository\CollectionRepository::hydrate()`

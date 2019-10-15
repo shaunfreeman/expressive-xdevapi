@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -30,7 +32,7 @@ final class SessionFactoryTest extends TestCase
         ]));
 
         $container  = $container->reveal();
-        $factory    = new SessionFactory;
+        $factory    = new SessionFactory();
         $client     = $factory($container);
 
         $this->assertInstanceOf(Session::class, $client);

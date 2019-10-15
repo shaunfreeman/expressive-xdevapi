@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -23,4 +25,3 @@ class DocumentEntityCollectionTest extends TestCase
         $this->assertInstanceOf(Paginator::class, $collection);
     }
 }
-

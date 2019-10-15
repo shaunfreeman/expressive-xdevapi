@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -34,7 +36,7 @@ class DefaultSchemaFactoryTest extends TestCase
             'schema'    => $_SERVER['MYSQL_DATABASE'],
         ]));
 
-        $factory    = new DefaultSchemaFactory;
+        $factory    = new DefaultSchemaFactory();
         $client     = $factory($container->reveal());
 
         $this->assertInstanceOf(Schema::class, $client);
@@ -61,8 +63,7 @@ class DefaultSchemaFactoryTest extends TestCase
 
         $container->get(SessionFactory::class)->willReturn($session->reveal());
 
-        $factory    = new DefaultSchemaFactory;
+        $factory    = new DefaultSchemaFactory();
         $factory($container->reveal());
     }
 }
-

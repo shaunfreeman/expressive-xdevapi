@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -58,4 +60,3 @@ class RepositoryAdapterTest extends TestCase
         $this->assertSame(1, $count);
     }
 }
-

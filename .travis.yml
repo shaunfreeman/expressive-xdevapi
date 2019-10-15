@@ -24,6 +24,7 @@ script:
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php ./vendor/bin/test-reporter --coverage-report=build/clover.xml; fi
+  - if [[ $CS_CHECK == 'true' ]]; then composer cs-check ; fi
 
 matrix:
   include:
@@ -31,3 +32,4 @@ matrix:
     - php: 7.3
       env:
         - TEST_COVERAGE=true
+        - CS_CHECK=true

@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -54,8 +56,7 @@ class DocumentHydratorTest extends TestCase
     public function testCanHydrateDataToObject()
     {
         $hydrator = new DocumentHydrator();
-        $documentEntity = $hydrator->hydrate($this->testArray, new DocumentEntity);
+        $documentEntity = $hydrator->hydrate($this->testArray, new DocumentEntity());
         $this->assertSame($this->testArray, $documentEntity->getArrayCopy());
     }
 }
-

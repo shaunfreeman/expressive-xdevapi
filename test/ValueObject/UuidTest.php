@@ -36,7 +36,6 @@ class UuidTest extends TestCase
     {
         $uuid = new Uuid();
         $this->assertTrue($uuid->isValid($uuid->toString()));
-
     }
 
     public function testCanParseExistingUuid()
@@ -49,7 +48,6 @@ class UuidTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         new Uuid('5fd4-7c55b2d34-8bb9888f-9679f18-f290');
-
     }
 
     public function testGetHex()
@@ -58,4 +56,3 @@ class UuidTest extends TestCase
         $this->assertSame('d1ec9c0f4bea41a884eb3d79d39e5025', $uuid->getHex());
     }
 }
-

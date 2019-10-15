@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -33,4 +35,3 @@ class DateTimeTest extends TestCase
         $this->assertSame(sprintf('"%s"', $now->format(DateTimeImmutable::W3C)), json_encode($dateTime));
     }
 }
-

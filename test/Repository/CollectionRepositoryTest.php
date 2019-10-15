@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -16,15 +18,8 @@ use XDevApi\Entity\DocumentEntityInterface;
 use XDevApi\Repository\CollectionDocumentInterface;
 use XDevApi\Repository\CollectionRepository;
 use XDevApi\ValueObject\Uuid;
+use XDevApiTest\Assets\RepositoryOverride;
 use XDevApiTest\Assets\TestDocumentEntity;
-
-class RepositoryOverride extends CollectionRepository
-{
-    /**
-     * @var string
-     */
-    protected $findAllSort = '$.date_created ASC';
-}
 
 class CollectionRepositoryTest extends TestCase
 {
@@ -49,7 +44,7 @@ class CollectionRepositoryTest extends TestCase
         $this->schema = $this->prophesize(Schema::class);
         $this->collection = $this->prophesize(Collection::class);
 
-        $this->schema->getCollection(Argument::type('string'))
+        $this->schema->getCollection('test')
             ->shouldBeCalledOnce()
             ->willReturn($this->collection->reveal());
     }
@@ -167,4 +162,3 @@ class CollectionRepositoryTest extends TestCase
         $this->assertInstanceOf(Result::class, $result);
     }
 }
-

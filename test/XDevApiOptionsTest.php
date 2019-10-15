@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -28,7 +30,7 @@ final class XDevApiOptionsTest extends TestCase
 
     public function testCanCreateOptions()
     {
-        $options = new XDevApiOptions;
+        $options = new XDevApiOptions();
 
         $this->assertInstanceOf(XDevApiOptions::class, $options);
     }
@@ -61,7 +63,8 @@ final class XDevApiOptionsTest extends TestCase
         $this->options->badProperty;
     }
 
-    public function addDataProvider() {
+    public function addDataProvider()
+    {
         return [
             ['user', $_SERVER['MYSQL_USER']],
             ['password', $_SERVER['MYSQL_PASSWORD']],
@@ -81,4 +84,3 @@ final class XDevApiOptionsTest extends TestCase
         $this->assertSame($expected, $this->options->$property);
     }
 }
-

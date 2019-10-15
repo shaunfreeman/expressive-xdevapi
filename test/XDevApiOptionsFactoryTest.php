@@ -1,4 +1,6 @@
-<?php /** @noinspection ALL */
+<?php
+
+/** @noinspection ALL */
 
 declare(strict_types=1);
 
@@ -32,4 +34,3 @@ class XDevApiOptionsFactoryTest extends TestCase
         $this->assertInstanceOf(XDevApiOptions::class, $options);
     }
 }
-
