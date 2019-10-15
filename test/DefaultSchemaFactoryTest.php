@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace XDevApiTest;
 
-
 use mysql_xdevapi\Exception;
 use mysql_xdevapi\Schema;
 use mysql_xdevapi\Session;

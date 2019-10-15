@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace XDevApiTest;
 
-
 use mysql_xdevapi\Session;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;

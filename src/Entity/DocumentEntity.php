@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\Entity;
-
 
 use Exception;
 use XDevApi\ValueObject\Uuid;
@@ -14,7 +12,7 @@ final class DocumentEntity implements DocumentEntityInterface
     /**
      * @var Uuid
      */
-    private $_id;
+    private $id;
 
     /**
      * @var array
@@ -22,13 +20,13 @@ final class DocumentEntity implements DocumentEntityInterface
     private $doc = [];
 
     /**
-     * @param string|null $_id
+     * @param string|null $id
      * @param array $doc
      * @throws Exception
      */
-    public function __construct(?string $_id = null, array $doc = [])
+    public function __construct(?string $id = null, array $doc = [])
     {
-        $this->_id = new Uuid($_id);
+        $this->id = new Uuid($id);
         $this->doc = $doc;
     }
 
@@ -38,7 +36,7 @@ final class DocumentEntity implements DocumentEntityInterface
      */
     public function getId(): string
     {
-        return $this->_id->getHex();
+        return $this->id->getHex();
     }
 
     /**
@@ -48,7 +46,7 @@ final class DocumentEntity implements DocumentEntityInterface
     public function getArrayCopy(): array
     {
         $array = [];
-        $array['id'] = (string) $this->_id;
+        $array['id'] = (string) $this->id;
         return array_merge($array, $this->doc);
     }
 

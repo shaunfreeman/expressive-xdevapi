@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace XDevApiTest;
 
-
 use PHPUnit\Framework\TestCase;
 use XDevApi;
 use XDevApi\ConfigProvider;
@@ -37,4 +36,3 @@ class ConfigProviderTest extends TestCase
         self::assertEquals(['dependencies' => $provider->getDependencies()], $provider());
     }
 }
-

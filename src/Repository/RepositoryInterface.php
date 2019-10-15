@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\Repository;
-
 
 use mysql_xdevapi\Schema;
 

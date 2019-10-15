@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98f42bef89de8b371bd0aae232d83828",
+    "content-hash": "51cad61f9cbe9ca2d490025ade093ed5",
     "packages": [
         {
             "name": "psr/container",
@@ -399,12 +399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "7c71fc2932158d00f24f10635bf3b3b8b6ee5b68"
+                "reference": "67dbbd519b584fdfb9f8d028912eb404ab411f8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/7c71fc2932158d00f24f10635bf3b3b8b6ee5b68",
-                "reference": "7c71fc2932158d00f24f10635bf3b3b8b6ee5b68",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/67dbbd519b584fdfb9f8d028912eb404ab411f8a",
+                "reference": "67dbbd519b584fdfb9f8d028912eb404ab411f8a",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2019-07-02T13:37:32+00:00"
+            "time": "2019-10-14T11:56:32+00:00"
         },
         {
             "name": "guzzle/guzzle",
@@ -1283,12 +1283,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "bec7a7cd934bf138603759b1b0ba223696a41765"
+                "reference": "d1e83a7efedee8f54122328c5db8be1d7fa37317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bec7a7cd934bf138603759b1b0ba223696a41765",
-                "reference": "bec7a7cd934bf138603759b1b0ba223696a41765",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d1e83a7efedee8f54122328c5db8be1d7fa37317",
+                "reference": "d1e83a7efedee8f54122328c5db8be1d7fa37317",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-10-14T04:31:32+00:00"
+            "time": "2019-10-15T08:25:43+00:00"
         },
         {
             "name": "psr/log",
@@ -2035,6 +2035,57 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "0afebf16a2e7f1e434920fa976253576151effe9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/0afebf16a2e7f1e434920fa976253576151effe9",
+                "reference": "0afebf16a2e7f1e434920fa976253576151effe9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2019-09-26T23:12:26+00:00"
         },
         {
             "name": "symfony/config",

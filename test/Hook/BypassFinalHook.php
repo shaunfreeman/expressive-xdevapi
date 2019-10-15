@@ -1,10 +1,8 @@
-<?php
+<?php /** @noinspection ALL */
 
 declare(strict_types=1);
 
-
 namespace XDevApiTest\Hook;
-
 
 use DG\BypassFinals;
 use PHPUnit\Runner\BeforeTestHook;

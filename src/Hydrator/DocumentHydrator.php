@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\Hydrator;
-
 
 use Exception;
 use XDevApi\Entity\DocumentEntityInterface;
@@ -23,8 +21,8 @@ final class DocumentHydrator implements HydratorInterface
             throw new Exception(sprintf(
                 'Class: "%s" needs to implement %s',
                 get_class($object),
-                DocumentEntityInterface::class)
-            );
+                DocumentEntityInterface::class
+            ));
         }
 
         return $object->getArrayCopy();
@@ -42,8 +40,8 @@ final class DocumentHydrator implements HydratorInterface
             throw new Exception(sprintf(
                 'Class: "%s" needs to implement %s',
                 get_class($object),
-                DocumentEntityInterface::class)
-            );
+                DocumentEntityInterface::class
+            ));
         }
 
         return $object::fromArray($data);

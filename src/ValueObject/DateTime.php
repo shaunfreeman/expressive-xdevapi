@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\ValueObject;
-
 
 use DateTimeImmutable;
 use JsonSerializable;

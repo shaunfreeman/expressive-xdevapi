@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\Paginator;
-
 
 use XDevApi\Repository\CollectionDocumentInterface;
 use XDevApi\Repository\RepositoryInterface;

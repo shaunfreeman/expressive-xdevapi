@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi\Repository;
-
 
 use Exception;
 use mysql_xdevapi\Collection;
@@ -136,9 +134,9 @@ class CollectionRepository implements CollectionDocumentInterface
     private function hydrate(array $rows): array
     {
         /** @var DocumentHydrator $hydrator */
-        $hydrator   = new $this->hydrator;
+        $hydrator   = new $this->hydrator();
         /** @var DocumentEntity $entity */
-        $entity     = new $this->entity;
+        $entity     = new $this->entity();
         $array      = [];
 
         foreach ($rows as $row) {

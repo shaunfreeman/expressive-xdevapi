@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changed
 
+- Coding standards now [PSR-12](https://www.php-fig.org/psr/psr-12/)
 - `XdevApi\Repository\CollectionRepository::findAll()` will now automatically hydrate array with `XDevApi\Entity\DocumentEntity`.
 - Changed `zendframework/zend-paginator` and `zendframework/zend-hydrator` to be required dependencies.
 - Added check for `id` in `XDevApi\Entity\DocumentEntity`

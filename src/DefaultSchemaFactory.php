@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi;
-
 
 use mysql_xdevapi\Exception;
 use mysql_xdevapi\Schema;

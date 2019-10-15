@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-
 namespace XDevApi;
-
 
 use mysql_xdevapi\Session;
 use Psr\Container\ContainerInterface;
+
 use function mysql_xdevapi\getSession;
 
 final class SessionFactory
@@ -19,7 +18,7 @@ final class SessionFactory
      */
     private $xDevApiOptions;
 
-    public function __invoke(ContainerInterface $container) : Session
+    public function __invoke(ContainerInterface $container): Session
     {
         $this->xDevApiOptions   = $container->get(XDevApiOptions::class);
 
