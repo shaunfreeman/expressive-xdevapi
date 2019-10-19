@@ -2,6 +2,11 @@ docs_dir: docs
 site_dir: docs/html
 nav:
   - Home: index.md
+  - Getting Started:
+      - Intro: intro.md
+  - Factory Classes:
+      - Session Factory: session-factory.md
+      - Default Schema Factory: default-schema-factory.md
 site_name: Expressive X DevApi
 repo_url: https://github.com/shaunfreeman/expressive-xdevapi
 theme: readthedocs

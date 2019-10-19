@@ -10,7 +10,7 @@ use BadMethodCallException;
  * Class XDevApiOptions
  * @package XDevApi
  * @property string $user
- * @property  string $password
+ * @property string $password
  * @property string $schema
  * @property string $host
  * @property int $port
@@ -29,7 +29,7 @@ final class XDevApiOptions
 
     public static function fromArray(array $array): XDevApiOptions
     {
-        $static             =  new static();
+        $static             = new static();
         $static->user       = $array['user'] ?? '';
         $static->password   = $array['password'] ?? '';
         $static->schema     = $array['schema'] ?? '';
