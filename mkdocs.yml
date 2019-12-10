@@ -9,4 +9,8 @@ nav:
       - Default Schema Factory: default-schema-factory.md
 site_name: Expressive X DevApi
 repo_url: https://github.com/shaunfreeman/expressive-xdevapi
-theme: readthedocs
+plugins:
+  - search
+  - git-committers
+theme:
+  name: readthedocs
