@@ -1,4 +1,4 @@
-#Expressive X DevAPI
+# Expressive X DevAPI
 
 [![Build Status](https://travis-ci.org/shaunfreeman/expressive-xdevapi.svg?branch=master)](https://travis-ci.org/shaunfreeman/expressive-xdevapi)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f20a0f21df2297ae031c/test_coverage)](https://codeclimate.com/github/shaunfreeman/expressive-xdevapi/test_coverage)
