@@ -13,7 +13,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use XDevApi\Paginator\RepositoryAdapter;
 use XDevApi\Repository\CollectionDocumentInterface;
 use XDevApi\Repository\RepositoryInterface;
-use Zend\Paginator\Adapter\AdapterInterface;
+use Laminas\Paginator\Adapter\AdapterInterface;
 
 class RepositoryAdapterTest extends TestCase
 {

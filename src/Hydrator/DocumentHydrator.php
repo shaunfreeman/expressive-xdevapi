@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace XDevApi\Hydrator;
 
 use Exception;
+use Laminas\Hydrator\HydratorInterface;
 use XDevApi\Entity\DocumentEntityInterface;
-use Zend\Hydrator\HydratorInterface;
 
 final class DocumentHydrator implements HydratorInterface
 {

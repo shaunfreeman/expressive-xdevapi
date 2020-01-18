@@ -11,7 +11,7 @@ use XDevApi\Entity\DocumentEntityCollection;
 use PHPUnit\Framework\TestCase;
 use XDevApi\Paginator\RepositoryAdapter;
 use XDevApi\Repository\RepositoryInterface;
-use Zend\Paginator\Paginator;
+use Laminas\Paginator\Paginator;
 
 class DocumentEntityCollectionTest extends TestCase
 {

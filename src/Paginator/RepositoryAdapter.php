@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace XDevApi\Paginator;
 
+use Laminas\Paginator\Adapter\AdapterInterface;
 use XDevApi\Repository\CollectionDocumentInterface;
 use XDevApi\Repository\RepositoryInterface;
-use Zend\Paginator\Adapter\AdapterInterface;
 
 final class RepositoryAdapter implements AdapterInterface
 {

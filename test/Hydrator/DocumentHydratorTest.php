@@ -10,7 +10,7 @@ use Exception;
 use XDevApi\Entity\DocumentEntity;
 use XDevApi\Hydrator\DocumentHydrator;
 use PHPUnit\Framework\TestCase;
-use Zend\Hydrator\HydratorInterface;
+use Laminas\Hydrator\HydratorInterface;
 
 class DocumentHydratorTest extends TestCase
 {
