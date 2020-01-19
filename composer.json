@@ -1,6 +1,6 @@
 {
-  "name": "shaunfreeman/expressive-xdevapi",
-  "description": "PSR-11 library for easy setup of MySQL X DevAPI into Zend Expressive.",
+  "name": "shaunfreeman/php-mysql-xdevapi",
+  "description": "PSR-11 library for easy setup of MySQL X DevAPI into Laminas.",
   "minimum-stability": "dev",
   "license": "BSD-3-Clause",
   "authors": [
@@ -19,12 +19,12 @@
     "psr-15",
     "expressive",
     "zf",
-    "zendframework",
-    "zend-expressive"
+    "laminas",
+    "mezzio"
   ],
   "support": {
-    "issues": "https://github.com/shaunfreeman/expressive-xdevapi/issues",
-    "source": "https://github.com/shaunfreeman/expressive-xdevapi"
+    "issues": "https://github.com/shaunfreeman/php-mysql-xdevapi/issues",
+    "source": "https://github.com/shaunfreeman/php-mysql-xdevapi"
   },
   "require": {
     "php": "^7.2",
