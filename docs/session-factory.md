@@ -1,6 +1,6 @@
 # Intro
 
-At the basic level Expressive X DevApi creates a X DevApi session. This exposes all the class methods in the [Session Class](https://www.php.net/manual/en/class.mysql-xdevapi-session.php), these are listed below.
+At the basic level PHP MySQL XDevApi creates a mysql_xdevapi session. This exposes all the class methods in the [Session Class](https://www.php.net/manual/en/class.mysql-xdevapi-session.php), these are listed below.
 
 Using the API this way gives you the most flexibility as you can access many schemas. Most times you will be using just one schema so the [`XDevApi\DefaultSchemaFactory`](default-schema-factory.md) will be better.
 
