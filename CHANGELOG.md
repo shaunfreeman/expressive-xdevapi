@@ -2,7 +2,51 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.4.0 - TBD
+## 2.0.0 - 02/02/202
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Namespace to ShaunFreeman\PhpMysqlXdevapi (Breaking Change)
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing. 
+
+## 1.5.0 - 01/08/202
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Updated Zend namespace to Laminas
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing. 
+
+## 1.4.0 - 10/12/2019
 
 ### Added
 
