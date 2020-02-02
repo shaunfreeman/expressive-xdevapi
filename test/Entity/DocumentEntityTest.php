@@ -4,12 +4,12 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Entity;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Entity;
 
 use PHPUnit\Framework\TestCase;
-use XDevApi\Entity\DocumentEntity;
-use XDevApi\Entity\DocumentEntityInterface;
-use XDevApi\ValueObject\Uuid;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntity;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
+use ShaunFreeman\PhpMysqlXdevapi\ValueObject\Uuid;
 
 class DocumentEntityTest extends TestCase
 {

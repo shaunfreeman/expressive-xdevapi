@@ -4,7 +4,7 @@
          bootstrap="vendor/autoload.php"
          colors="true">
     <testsuites>
-        <testsuite name="XDevApi\\Tests">
+        <testsuite name="ShaunFreeman\\PhpMysqlXdevapi\\Test">
             <directory>./test</directory>
         </testsuite>
     </testsuites>
@@ -16,7 +16,7 @@
     </filter>
 
     <extensions>
-        <extension class="XDevApiTest\Hook\BypassFinalHook"/>
+        <extension class="ShaunFreeman\PhpMysqlXdevapi\Test\Hook\BypassFinalHook"/>
     </extensions>
 
     <logging>

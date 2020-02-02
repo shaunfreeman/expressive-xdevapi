@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApi;
+namespace ShaunFreeman\PhpMysqlXdevapi;
 
 use mysql_xdevapi\Session;
 use Psr\Container\ContainerInterface;

@@ -4,7 +4,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use mysql_xdevapi\Exception;
 use mysql_xdevapi\Schema;
@@ -12,9 +12,9 @@ use mysql_xdevapi\Session;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
-use XDevApi\DefaultSchemaFactory;
-use XDevApi\SessionFactory;
-use XDevApi\XDevApiOptions;
+use ShaunFreeman\PhpMysqlXdevapi\DefaultSchemaFactory;
+use ShaunFreeman\PhpMysqlXdevapi\SessionFactory;
+use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
 
 class DefaultSchemaFactoryTest extends TestCase
 {

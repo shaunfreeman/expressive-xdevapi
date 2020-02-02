@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Repository;
+namespace ShaunFreeman\PhpMysqlXdevapi\Repository;
 
 use mysql_xdevapi\Collection;
 use mysql_xdevapi\Result;
-use XDevApi\Entity\DocumentEntityInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
 
 interface CollectionDocumentInterface extends RepositoryInterface
 {

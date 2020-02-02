@@ -4,7 +4,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Repository;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Repository;
 
 use mysql_xdevapi\Collection;
 use mysql_xdevapi\CollectionFind;
@@ -14,12 +14,12 @@ use mysql_xdevapi\Schema;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
-use XDevApi\Entity\DocumentEntityInterface;
-use XDevApi\Repository\CollectionDocumentInterface;
-use XDevApi\Repository\CollectionRepository;
-use XDevApi\ValueObject\Uuid;
-use XDevApiTest\Assets\RepositoryOverride;
-use XDevApiTest\Assets\TestDocumentEntity;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionDocumentInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionRepository;
+use ShaunFreeman\PhpMysqlXdevapi\ValueObject\Uuid;
+use ShaunFreeman\PhpMysqlXdevapi\Test\Assets\RepositoryOverride;
+use ShaunFreeman\PhpMysqlXdevapi\Assets\TestDocumentEntity;
 
 class CollectionRepositoryTest extends TestCase
 {

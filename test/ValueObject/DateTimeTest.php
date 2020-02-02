@@ -4,11 +4,11 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\ValueObject;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\ValueObject;
 
 use DateTimeImmutable;
 use JsonSerializable;
-use XDevApi\ValueObject\DateTime;
+use ShaunFreeman\PhpMysqlXdevapi\ValueObject\DateTime;
 use PHPUnit\Framework\TestCase;
 
 class DateTimeTest extends TestCase

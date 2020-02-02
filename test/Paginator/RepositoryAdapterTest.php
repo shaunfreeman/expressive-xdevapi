@@ -4,15 +4,15 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Paginator;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Paginator;
 
 use mysql_xdevapi\Collection;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
-use XDevApi\Paginator\RepositoryAdapter;
-use XDevApi\Repository\CollectionDocumentInterface;
-use XDevApi\Repository\RepositoryInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Paginator\RepositoryAdapter;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionDocumentInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\RepositoryInterface;
 use Laminas\Paginator\Adapter\AdapterInterface;
 
 class RepositoryAdapterTest extends TestCase

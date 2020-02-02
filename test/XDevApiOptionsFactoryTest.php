@@ -4,12 +4,12 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
-use XDevApi\XDevApiOptions;
-use XDevApi\XDevApiOptionsFactory;
+use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
+use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptionsFactory;
 use PHPUnit\Framework\TestCase;
 
 class XDevApiOptionsFactoryTest extends TestCase

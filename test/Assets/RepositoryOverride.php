@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Assets;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Assets;
 
-use XDevApi\Repository\CollectionRepository;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionRepository;
 
 class RepositoryOverride extends CollectionRepository
 {

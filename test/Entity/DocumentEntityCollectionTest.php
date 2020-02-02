@@ -4,13 +4,13 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Entity;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Entity;
 
 use Prophecy\Prophecy\ObjectProphecy;
-use XDevApi\Entity\DocumentEntityCollection;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityCollection;
 use PHPUnit\Framework\TestCase;
-use XDevApi\Paginator\RepositoryAdapter;
-use XDevApi\Repository\RepositoryInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Paginator\RepositoryAdapter;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\RepositoryInterface;
 use Laminas\Paginator\Paginator;
 
 class DocumentEntityCollectionTest extends TestCase

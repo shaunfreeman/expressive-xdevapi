@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Repository;
+namespace ShaunFreeman\PhpMysqlXdevapi\Repository;
 
 use Exception;
 use mysql_xdevapi\Collection;
 use mysql_xdevapi\Result;
 use mysql_xdevapi\Schema;
-use XDevApi\Entity\DocumentEntity;
-use XDevApi\Entity\DocumentEntityInterface;
-use XDevApi\Hydrator\DocumentHydrator;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntity;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Hydrator\DocumentHydrator;
 
 class CollectionRepository implements CollectionDocumentInterface
 {

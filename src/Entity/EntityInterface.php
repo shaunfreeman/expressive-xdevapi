@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Entity;
+namespace ShaunFreeman\PhpMysqlXdevapi\Entity;
 
 interface EntityInterface
 {

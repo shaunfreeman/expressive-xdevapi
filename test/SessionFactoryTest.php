@@ -4,14 +4,14 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use mysql_xdevapi\Session;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
-use XDevApi\SessionFactory;
+use ShaunFreeman\PhpMysqlXdevapi\SessionFactory;
 use PHPUnit\Framework\TestCase;
-use XDevApi\XDevApiOptions;
+use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
 
 final class SessionFactoryTest extends TestCase
 {

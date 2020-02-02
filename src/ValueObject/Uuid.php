@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\ValueObject;
+namespace ShaunFreeman\PhpMysqlXdevapi\ValueObject;
 
 use Exception;
 use InvalidArgumentException;

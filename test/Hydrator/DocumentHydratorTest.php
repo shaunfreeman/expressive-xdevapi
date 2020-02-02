@@ -4,11 +4,11 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Hydrator;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Hydrator;
 
 use Exception;
-use XDevApi\Entity\DocumentEntity;
-use XDevApi\Hydrator\DocumentHydrator;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntity;
+use ShaunFreeman\PhpMysqlXdevapi\Hydrator\DocumentHydrator;
 use PHPUnit\Framework\TestCase;
 use Laminas\Hydrator\HydratorInterface;
 

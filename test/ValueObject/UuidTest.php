@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\ValueObject;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\ValueObject;
 
 use InvalidArgumentException;
-use XDevApi\ValueObject\Uuid;
+use ShaunFreeman\PhpMysqlXdevapi\ValueObject\Uuid;
 use PHPUnit\Framework\TestCase;
 
 class UuidTest extends TestCase

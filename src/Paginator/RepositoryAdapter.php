@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Paginator;
+namespace ShaunFreeman\PhpMysqlXdevapi\Paginator;
 
 use Laminas\Paginator\Adapter\AdapterInterface;
-use XDevApi\Repository\CollectionDocumentInterface;
-use XDevApi\Repository\RepositoryInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionDocumentInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Repository\RepositoryInterface;
 
 final class RepositoryAdapter implements AdapterInterface
 {

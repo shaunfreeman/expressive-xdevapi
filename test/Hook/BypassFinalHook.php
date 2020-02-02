@@ -4,7 +4,7 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest\Hook;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test\Hook;
 
 use DG\BypassFinals;
 use PHPUnit\Runner\BeforeTestHook;

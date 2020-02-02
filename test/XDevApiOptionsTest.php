@@ -4,10 +4,10 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use BadMethodCallException;
-use XDevApi\XDevApiOptions;
+use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
 use PHPUnit\Framework\TestCase;
 
 final class XDevApiOptionsTest extends TestCase

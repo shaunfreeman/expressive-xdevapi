@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Entity;
+namespace ShaunFreeman\PhpMysqlXdevapi\Entity;
 
 use Exception;
-use XDevApi\ValueObject\Uuid;
+use ShaunFreeman\PhpMysqlXdevapi\ValueObject\Uuid;
 
 final class DocumentEntity implements DocumentEntityInterface
 {
@@ -70,8 +70,6 @@ final class DocumentEntity implements DocumentEntityInterface
         $uuid = $array['_id'] ?? $array['id'] ?? null;
         unset($array['_id'], $array['id']);
 
-        $entity = new static($uuid, $array);
-
-        return $entity;
+        return new static($uuid, $array);
     }
 }

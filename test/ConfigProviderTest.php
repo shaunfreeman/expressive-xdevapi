@@ -2,36 +2,33 @@
 
 declare(strict_types=1);
 
-namespace XDevApiTest;
+namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use PHPUnit\Framework\TestCase;
-use XDevApi;
-use XDevApi\ConfigProvider;
-use XDevApi\XDevApiOptions;
-use XDevApi\XDevApiOptionsFactory;
+use ShaunFreeman\PhpMysqlXdevapi;
 
 class ConfigProviderTest extends TestCase
 {
     private $config = [
         'factories'  => [
-            XDevApi\DefaultSchemaFactory::class => XDevApi\DefaultSchemaFactory::class,
-            XDevApi\SessionFactory::class       => XDevApi\SessionFactory::class,
-            XDevApiOptions::class               => XDevApiOptionsFactory::class,
+            PhpMysqlXdevapi\DefaultSchemaFactory::class => PhpMysqlXdevapi\DefaultSchemaFactory::class,
+            PhpMysqlXdevapi\SessionFactory::class       => PhpMysqlXdevapi\SessionFactory::class,
+            PhpMysqlXdevapi\XDevApiOptions::class       => PhpMysqlXdevapi\XDevApiOptionsFactory::class,
         ],
     ];
 
     public function testProvidesExpectedConfiguration()
     {
-        $provider = new ConfigProvider();
+        $provider = new PhpMysqlXdevapi\ConfigProvider();
         self::assertEquals($this->config, $provider->getDependencies());
         return $provider;
     }
 
     /**
      * @depends testProvidesExpectedConfiguration
-     * @param ConfigProvider $provider
+     * @param PhpMysqlXdevapi\ConfigProvider $provider
      */
-    public function testInvocationProvidesDependencyConfiguration(ConfigProvider $provider)
+    public function testInvocationProvidesDependencyConfiguration(PhpMysqlXdevapi\ConfigProvider $provider)
     {
         self::assertEquals(['dependencies' => $provider->getDependencies()], $provider());
     }

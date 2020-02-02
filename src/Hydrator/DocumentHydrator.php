@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace XDevApi\Hydrator;
+namespace ShaunFreeman\PhpMysqlXdevapi\Hydrator;
 
 use Exception;
 use Laminas\Hydrator\HydratorInterface;
-use XDevApi\Entity\DocumentEntityInterface;
+use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
 
 final class DocumentHydrator implements HydratorInterface
 {
