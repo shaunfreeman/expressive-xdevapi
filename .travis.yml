@@ -5,6 +5,7 @@ language: php
 before_script:
   - sudo apt-get update
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
+  - pecl channel-update pecl.php.net
   - pecl install uopz
   - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
   - cd ./mysql_xdevapi
