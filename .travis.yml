@@ -7,21 +7,12 @@ before_script:
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
   - pecl channel-update pecl.php.net
   - pecl install uopz-6.1.1
-  - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
-  - cd ./mysql_xdevapi
-  - git checkout 8.0.21
-  - phpize
-  - ./configure --enable-mysql-xdevapi --with-boost --with-protobuf
-  - make -j"$(nproc)"
-  - make install
-  - make clean
-  - cd ../
-  - echo "extension=mysql_xdevapi.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - pecl install mysql_xdevapi
   - composer self-update
 
 script:
   - composer update
-  - php ./vendor/bin/phpunit -c ./phpunit.xml
+  - php ./vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml ./phpunit.xml
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php ./vendor/bin/test-reporter --coverage-report=build/clover.xml; fi
