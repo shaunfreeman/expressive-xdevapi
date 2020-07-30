@@ -7,6 +7,7 @@ namespace ShaunFreeman\PhpMysqlXdevapi\Test\Paginator;
 use mysql_xdevapi\Collection;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use ShaunFreeman\PhpMysqlXdevapi\Paginator\RepositoryAdapter;
 use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionDocumentInterface;
@@ -15,12 +16,13 @@ use Laminas\Paginator\Adapter\AdapterInterface;
 
 class RepositoryAdapterTest extends TestCase
 {
+    use ProphecyTrait;
     /**
      * @var RepositoryInterface
      */
     private $repository;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

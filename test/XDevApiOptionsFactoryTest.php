@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
@@ -12,6 +13,8 @@ use PHPUnit\Framework\TestCase;
 
 class XDevApiOptionsFactoryTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testFactoryCanReturnOptionsClass()
     {
         /** @var ContainerInterface|ObjectProphecy $container */

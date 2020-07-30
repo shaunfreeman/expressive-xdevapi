@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ShaunFreeman\PhpMysqlXdevapi\Test\Entity;
 
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityCollection;
 use PHPUnit\Framework\TestCase;
@@ -13,6 +14,8 @@ use Laminas\Paginator\Paginator;
 
 class DocumentEntityCollectionTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testCanCreateCollection()
     {
         /** @var RepositoryInterface|ObjectProphecy $repository */

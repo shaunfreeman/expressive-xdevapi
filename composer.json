@@ -38,8 +38,9 @@
     "ext-uopz": "*",
     "dg/bypass-finals": "^1.1",
     "codeclimate/php-test-reporter": "^0.3",
-    "phpunit/phpunit": "^7.0",
-    "squizlabs/php_codesniffer": "3.5.0"
+    "phpunit/phpunit": "^9.0",
+    "squizlabs/php_codesniffer": "3.5.0",
+    "phpspec/prophecy-phpunit": "^2.0"
   },
   "autoload": {
     "psr-4": {

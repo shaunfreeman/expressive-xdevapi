@@ -7,10 +7,10 @@ before_script:
   - sudo apt-get install -y libprotobuf-dev libboost-dev protobuf-compiler
   - phpenv config-rm xdebug.ini
   - pecl channel-update pecl.php.net
-  - pecl install uopz-6.1.1
+  - pecl install uopz-6.1.2
   - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
   - cd ./mysql_xdevapi
-  - git checkout 8.0.21
+  - git checkout 8.0.20
   - phpize
   - ./configure --enable-mysql-xdevapi --with-boost --with-protobuf
   - make -j"$(nproc)"

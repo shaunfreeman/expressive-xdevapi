@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 
 use mysql_xdevapi\Session;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ShaunFreeman\PhpMysqlXdevapi\SessionFactory;
@@ -13,6 +14,8 @@ use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
 
 final class SessionFactoryTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testFactoryCanCreateSession()
     {
         /** @var Session|ObjectProphecy $sessionMock */

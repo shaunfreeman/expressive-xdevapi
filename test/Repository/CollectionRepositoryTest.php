@@ -11,6 +11,7 @@ use mysql_xdevapi\Result;
 use mysql_xdevapi\Schema;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use ShaunFreeman\PhpMysqlXdevapi\Entity\DocumentEntityInterface;
 use ShaunFreeman\PhpMysqlXdevapi\Repository\CollectionDocumentInterface;
@@ -21,6 +22,7 @@ use ShaunFreeman\PhpMysqlXdevapi\Assets\TestDocumentEntity;
 
 class CollectionRepositoryTest extends TestCase
 {
+    use ProphecyTrait;
     /**
      * @var Schema|ObjectProphecy
      */
@@ -36,7 +38,7 @@ class CollectionRepositoryTest extends TestCase
         ['_id' => '1c75382efc8545bb8086da6ad91a3230', 'test_field2' => 'test2'],
     ];
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->schema = $this->prophesize(Schema::class);

@@ -7,6 +7,7 @@ namespace ShaunFreeman\PhpMysqlXdevapi\Test;
 use mysql_xdevapi\Exception;
 use mysql_xdevapi\Schema;
 use mysql_xdevapi\Session;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
@@ -16,6 +17,7 @@ use ShaunFreeman\PhpMysqlXdevapi\XDevApiOptions;
 
 class DefaultSchemaFactoryTest extends TestCase
 {
+    use ProphecyTrait;
 
     public function testFactoryCanReturnDefaultSchema()
     {

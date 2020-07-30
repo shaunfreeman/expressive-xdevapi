@@ -15,7 +15,7 @@ final class XDevApiOptionsTest extends TestCase
      */
     protected $options;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->options =  XDevApiOptions::fromArray([

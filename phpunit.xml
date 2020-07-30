@@ -21,12 +21,13 @@
 
     <logging>
         <log type="coverage-html" target="./build"/>
-        <log type="testdox-html" target="./build/testdox.html"/>
         <log type="coverage-clover" target="./build/clover.xml"/>
         <log type="coverage-text" target="php://stdout"/>
     </logging>
 
     <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1"/>
         <server name="MYSQL_USER" value="dbuser" />
         <server name="MYSQL_PASSWORD" value="654321" />
         <server name="MYSQL_HOST" value="mysql" />
