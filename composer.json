@@ -27,7 +27,7 @@
     "source": "https://github.com/shaunfreeman/php-mysql-xdevapi"
   },
   "require": {
-    "php": "^7.2",
+    "php": "^7.3",
     "ext-json": "*",
     "ext-mysql_xdevapi": "*",
     "psr/container": "^1.0",
