@@ -1,7 +1,7 @@
 {
   "name": "shaunfreeman/php-mysql-xdevapi",
   "description": "PSR-11 library for easy setup of MySQL X DevAPI into Laminas.",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "BSD-3-Clause",
   "authors": [
     {

@@ -24,12 +24,12 @@ return [
 ```
 Change these values to reflect your MySQL login details.
 
-Next, if it hasn't already be done, you will need to add `\XDevApi\ConfigProvider::class` to your `config/config.php` like
+Next, if it hasn't already be done, you will need to add `\ShaunFreeman\PhpMysqlXdevapi\ConfigProvider::class` to your `config/config.php` like
 
 ```php
 ...
 $aggregator = new ConfigAggregator([
-    \XDevApi\ConfigProvider::class,
+    \ShaunFreeman\PhpMysqlXdevapi\ConfigProvider::class,
 ...
 ```
 Now that is done you are ready to use Expressive X DevApi.

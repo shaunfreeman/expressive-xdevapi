@@ -8,7 +8,7 @@ before_script:
   - pecl install uopz
   - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
   - cd ./mysql_xdevapi
-  - git checkout 8.0.19
+  - git checkout 8.0.21
   - phpize
   - ./configure --enable-mysql-xdevapi --with-boost --with-protobuf
   - make -j"$(nproc)"

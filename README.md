@@ -22,7 +22,7 @@ if you haven't got the 'laminas/laminas-component-installer' installed then in y
 ...
 
 $aggregator = new ConfigAggregator([
-    \XDevApi\ConfigProvider::class,
+    \ShaunFreeman\PhpMysqlXdevapi\ConfigProvider::class,
 ... 
 ```
 

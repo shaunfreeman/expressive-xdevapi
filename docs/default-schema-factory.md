@@ -1,6 +1,6 @@
 # Intro
 
-The `XdevApi\DefaultSchemaFactory` is like the `XdevApi\SessionFactory` but returns the default schema as set in the config options. This exposes the class methods in the [`mysql_xdevapi\Schema`](https://www.php.net/manual/en/class.mysql-xdevapi-schema.php) class as listed below
+The `ShaunFreeman\PhpMysqlXdevapi\DefaultSchemaFactory` is like the `ShaunFreeman\PhpMysqlXdevapi\SessionFactory` but returns the default schema as set in the config options. This exposes the class methods in the [`mysql_xdevapi\Schema`](https://www.php.net/manual/en/class.mysql-xdevapi-schema.php) class as listed below
 ```php
 mysql_xdevapi\Schema implements mysql_xdevapi\DatabaseObject {
     /* Properties */
@@ -22,7 +22,7 @@ mysql_xdevapi\Schema implements mysql_xdevapi\DatabaseObject {
 ## Usage
 First step is to initialise the database schema through the container interface with
 ```php
-$schema = $container->get(XDevApi\DeaultSchemaFactory::class);
+$schema = $container->get(ShaunFreeman\PhpMysqlXdevapi\DeaultSchemaFactory::class);
 ```
 This can be done in a factory class like [example](#example-factory-class) below.
 **NB. The default database schema has to be existing already or an exception will be thrown.**
@@ -50,7 +50,7 @@ declare(strict_types=1);
 namespace Blog\Handler;
 
 use Psr\Container\ContainerInterface;
-use XDevApi\DefaultSchemaFactory;
+use ShaunFreeman\PhpMysqlXdevapi\DefaultSchemaFactory;
 
 class PostListHandlerFactory
 {

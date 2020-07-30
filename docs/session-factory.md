@@ -30,7 +30,7 @@ mysql_xdevapi\Session {
 ## Usage
 To setup a X DevApi session the best way is to call `XDevApi\SessionFactory` through a factory class like, see [Example factory Class](#example-factory-class).
 ```php
-$session = $container->get(XDevApi\SessionFactory::class);
+$session = $container->get(ShaunFreeman\PhpMysqlXdevapi\SessionFactory::class);
 ```
 Calling the X DevApi Session this way no database schema is set, so you will have to call one by something like
 ```php
@@ -47,7 +47,7 @@ declare(strict_types=1);
 namespace Blog\Handler;
 
 use Psr\Container\ContainerInterface;
-use XDevApi\DefaultSchemaFactory;
+use ShaunFreeman\PhpMysqlXdevapi\DefaultSchemaFactory;
 
 class PostListHandlerFactory
 {
