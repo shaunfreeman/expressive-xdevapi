@@ -17,6 +17,7 @@ use Laminas\Paginator\Adapter\AdapterInterface;
 class RepositoryAdapterTest extends TestCase
 {
     use ProphecyTrait;
+
     /**
      * @var RepositoryInterface
      */

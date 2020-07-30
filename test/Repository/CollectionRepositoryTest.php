@@ -23,6 +23,7 @@ use ShaunFreeman\PhpMysqlXdevapi\Assets\TestDocumentEntity;
 class CollectionRepositoryTest extends TestCase
 {
     use ProphecyTrait;
+
     /**
      * @var Schema|ObjectProphecy
      */
