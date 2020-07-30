@@ -22,7 +22,7 @@ before_script:
 
 script:
   - composer update
-  - phpdbg -qrr ./bin/phpunit -v -c ./phpunit.xml
+  - phpdbg -qrr ./vendor/bin/phpunit -v -c ./phpunit.xml
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then php ./vendor/bin/test-reporter --coverage-report=build/clover.xml; fi
