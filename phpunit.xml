@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         colors="true">
-    <testsuites>
-        <testsuite name="ShaunFreeman\\PhpMysqlXdevapi\\Test">
-            <directory>./test</directory>
-        </testsuite>
-    </testsuites>
-
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
-        </whitelist>
-    </filter>
-
-    <extensions>
-        <extension class="ShaunFreeman\PhpMysqlXdevapi\Test\Hook\BypassFinalHook"/>
-    </extensions>
-
-    <logging>
-        <log type="coverage-html" target="./build"/>
-        <log type="coverage-clover" target="./build/clover.xml"/>
-        <log type="coverage-text" target="php://stdout"/>
-    </logging>
-
-    <php>
-        <ini name="error_reporting" value="-1"/>
-        <ini name="display_errors" value="1"/>
-        <server name="MYSQL_USER" value="dbuser" />
-        <server name="MYSQL_PASSWORD" value="654321" />
-        <server name="MYSQL_HOST" value="mysql" />
-        <server name="MYSQL_DATABASE" value="dbname" />
-    </php>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+    <report>
+      <clover outputFile="./build/clover.xml"/>
+      <html outputDirectory="./build"/>
+      <text outputFile="php://stdout"/>
+    </report>
+  </coverage>
+  <testsuites>
+    <testsuite name="ShaunFreeman\\PhpMysqlXdevapi\\Test">
+      <directory>./test</directory>
+    </testsuite>
+  </testsuites>
+  <extensions>
+    <extension class="ShaunFreeman\PhpMysqlXdevapi\Test\Hook\BypassFinalHook"/>
+  </extensions>
+  <logging/>
+  <php>
+    <ini name="error_reporting" value="-1"/>
+    <ini name="display_errors" value="1"/>
+    <server name="MYSQL_USER" value="dbuser"/>
+    <server name="MYSQL_PASSWORD" value="654321"/>
+    <server name="MYSQL_HOST" value="mysql"/>
+    <server name="MYSQL_DATABASE" value="dbname"/>
+  </php>
 </phpunit>

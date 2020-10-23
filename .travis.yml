@@ -1,6 +1,12 @@
-dist: bionic
+dist: focal
 
 language: php
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+  - 8.0
 
 before_script:
   - sudo apt-get update
@@ -10,7 +16,7 @@ before_script:
   - pecl install uopz-6.1.2
   - git clone https://github.com/php/pecl-database-mysql_xdevapi.git ./mysql_xdevapi
   - cd ./mysql_xdevapi
-  - git checkout 8.0.20
+  - git checkout 8.0.22
   - phpize
   - ./configure --enable-mysql-xdevapi --with-boost --with-protobuf
   - make -j"$(nproc)"
@@ -30,8 +36,13 @@ after_script:
 
 matrix:
   include:
+    - php: 7.2
     - php: 7.3
     - php: 7.4
       env:
         - TEST_COVERAGE=true
         - CS_CHECK=true
+    - php: 8.0
+  allow_failures:
+    - php: 7.2
+    - php: 8.0
